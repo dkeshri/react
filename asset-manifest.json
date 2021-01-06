@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/React/static/css/main.4002ab72.chunk.css",
+    "main.js": "/React/static/js/main.61e758af.chunk.js",
+    "main.js.map": "/React/static/js/main.61e758af.chunk.js.map",
+    "runtime-main.js": "/React/static/js/runtime-main.51628f6c.js",
+    "runtime-main.js.map": "/React/static/js/runtime-main.51628f6c.js.map",
+    "static/js/2.2517bf68.chunk.js": "/React/static/js/2.2517bf68.chunk.js",
+    "static/js/2.2517bf68.chunk.js.map": "/React/static/js/2.2517bf68.chunk.js.map",
+    "index.html": "/React/index.html",
+    "precache-manifest.3ce4e272999a0046470d729df09e8a3f.js": "/React/precache-manifest.3ce4e272999a0046470d729df09e8a3f.js",
+    "service-worker.js": "/React/service-worker.js",
+    "static/css/main.4002ab72.chunk.css.map": "/React/static/css/main.4002ab72.chunk.css.map",
+    "static/js/2.2517bf68.chunk.js.LICENSE.txt": "/React/static/js/2.2517bf68.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/React/static/media/bg.eb4e894d.jpg",
+    "static/media/google.svg": "/React/static/media/google.73cbaa09.svg",
+    "static/media/login.png": "/React/static/media/login.fd58a052.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.51628f6c.js",
+    "static/js/2.2517bf68.chunk.js",
+    "static/css/main.4002ab72.chunk.css",
+    "static/js/main.61e758af.chunk.js"
+  ]
+}
