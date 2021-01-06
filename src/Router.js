@@ -6,7 +6,7 @@ import Login from './Components/OpenPage/Login'
 
 function AppRouter() {
     return (
-        <Router basename="/react">
+        <Router basename="/React">
             <Switch>
                 <Route  exact path="/" component={Home}/>
                 <Route  exact path="/Home" component={Home}/>
