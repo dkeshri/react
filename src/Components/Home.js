@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Select from 'react-select';
 import { Button } from '@material-ui/core';
 import {setCookie,getCookie} from '../utility'
+import Utilfunction from '../JavascriptConcept/Utilfunction'
 const useStyles = makeStyles((theme) => ({
     root: {
         margin: '10px'
@@ -113,6 +114,7 @@ function Home() {
                         }));
                         console.log(`cookie data ${getCookie('name')}`);
                 }}>Click me to fetch data</Button>
+                <Utilfunction></Utilfunction>
             </Paper>
         </div>
     )
