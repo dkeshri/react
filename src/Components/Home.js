@@ -112,7 +112,7 @@ function Home() {
                             console.log(e);
                         }));
                         console.log(`cookie data ${getCookie('name')}`);
-                }}>Click me </Button>
+                }}>Click me to fetch data</Button>
             </Paper>
         </div>
     )
