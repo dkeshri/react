@@ -1,21 +1,18 @@
 import React from 'react'
-import {BrowserRouter as  Router, Switch, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { ProtectedRoute } from './ProtectedRoute'
 import Home from './Components/Home'
 import PageNotFound from './Components/Common/PageNotFound'
 import Login from './Components/OpenPage/Login'
-import Dropdown from './Components/Dropdown'
-function AppRouter() {
+export const AppRouter = () => {
     return (
         <Router basename="/React">
             <Switch>
-                <Route  exact path="/" component={Home}/>
-                <Route  exact path="/Home" component={Home}/>
-                <Route  exact path="/Dropdown" component={Dropdown}/>
-                <Route  path="/Login" component={Login}/>
-                <Route path="*" component={PageNotFound}/>
+                <Route path="/Login" exact component={Login} />
+                <ProtectedRoute path="/" exact component={Home} />
+                <ProtectedRoute path="/Home" exact component={Home} />
+                <Route path="*" exact component={PageNotFound} />
             </Switch>
         </Router>
     )
 }
-
-export default AppRouter
