@@ -4,6 +4,7 @@ import { ProtectedRoute } from './ProtectedRoute'
 import Home from './Components/Home'
 import PageNotFound from './Components/Common/PageNotFound'
 import Login from './Components/OpenPage/Login'
+import Test from './Components/Pages/Test'
 export const AppRouter = () => {
     return (
         <Router basename="/React">
@@ -11,6 +12,7 @@ export const AppRouter = () => {
                 <Route path="/Login" exact component={Login} />
                 <ProtectedRoute path="/" exact component={Home} />
                 <ProtectedRoute path="/Home" exact component={Home} />
+                <ProtectedRoute path="/Test" exact component={Test} />
                 <Route path="*" exact component={PageNotFound} />
             </Switch>
         </Router>
