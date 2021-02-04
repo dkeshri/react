@@ -1,4 +1,4 @@
-import React , {useState} from 'react';
+import React, { useState } from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
@@ -20,23 +20,17 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Drawer() {
+export default function Drawer(props) {
+  console.log(props.isDrawerOpened);
   const classes = useStyles();
-  const [isDrawedOpen,setDrawerState] = useState(false);
-  const toggleDrawer = (open) => (event) => {
-    if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
-    setDrawerState(open);
-  };
   const list = (anchor) => (
     <div
       className={clsx(classes.list, {
         [classes.fullList]: anchor === 'top' || anchor === 'bottom',
       })}
       role="presentation"
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
+      onClick={props.toggleDrawer(false)}
+      onKeyDown={props.toggleDrawer(false)}
     >
       <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
@@ -59,16 +53,13 @@ export default function Drawer() {
   );
 
   return (
-        <>
-          <Button onClick={toggleDrawer(true)}>{'left'}</Button>
-          <SwipeableDrawer
-            anchor={'left'}
-            open={isDrawedOpen}
-            onClose={toggleDrawer(false)}
-            onOpen={toggleDrawer(true)}
-          >
-            {list('left')}
-          </SwipeableDrawer>
-        </>
+    <SwipeableDrawer
+      anchor={'left'}
+      open={props.isDrawerOpened}
+      onClose={props.toggleDrawer(false)}
+      onOpen={props.toggleDrawer(true)}
+    >
+      {list('left')}
+    </SwipeableDrawer>
   );
 }
