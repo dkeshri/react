@@ -17,6 +17,14 @@ const config = {
             }]
         },
         {
+            name: 'CSS',
+            children: [{
+                name: 'Test',
+                path: '/Test',
+                children: []
+            }]
+        },
+        {
             name: 'About1',
             children: [{
                 name: 'Test',
