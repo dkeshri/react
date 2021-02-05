@@ -1,36 +1,66 @@
 const config = {
-    admin:{
+    admin: {
 
     },
-    menuItems:[
+    menuItems: [
         {
-            name:'About1',
-            children:[{
+            name: 'About1',
+            children: [{
                 name: 'Test',
-                path:'/Test',
+                children: [{
+                    name: 'About2',
+                    children: [{
+                        name: 'Test',
+                        children: [
+
+                            {
+                                name: 'Test',
+                                children: [{
+                                    name: 'About2',
+                                    children: [{
+                                        name: 'Test',
+                                        children: [
+                
+                
+                
+                                            
+                                        ]
+                                    }]
+                                },{
+                                    name:'Link1',
+                                    path:'/Test'
+                                }]
+                            }
+
+
+                        ]
+                    }]
+                },{
+                    name:'Link1',
+                    path:'/Test'
+                }]
+            }]
+        },
+        {
+            name: 'About2',
+            children: [{
+                name: 'Test',
+                path: '/Test',
                 children: []
             }]
         },
         {
-            name:'About2',
-            children:[{
-                name: 'Test',
-                path:'/Test',
-                children: []
-            }]
+            name: 'Home',
+            path: '/Home'
         },
         {
-            name:'Home',
-            path:'/Home'  
-        },
-        {
-            name:'About',
-            children:[{
+            name: 'About',
+            children: [{
                 name: 'Test',
-                path:'/Test',
+                path: '/Test',
                 children: []
             }]
         }
     ]
 }
-export {config}
+export { config }

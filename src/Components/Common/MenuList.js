@@ -80,20 +80,25 @@ const getTreeItemsFromData = (treeItems,toggleDrawer,parentName) => {
   
   const onClickTreeItem = (path,e) => {
     if (path !== undefined){
-      history.push(path);
-      toggleDrawer(false)(e);
+      // history.push(path);
+      // toggleDrawer(false)(e);
     }
      
   }
   return treeItems.map(treeItemData => {
     let children = undefined;
+    if(parentName===undefined){
+      parentName = treeItemData.name;
+    }else{
+      parentName = parentName+'-'+treeItemData.name;
+    }
     if (treeItemData.children && treeItemData.children.length > 0) {
-      children = getTreeItemsFromData(treeItemData.children,toggleDrawer,treeItemData.name);
+      children = getTreeItemsFromData(treeItemData.children,toggleDrawer,parentName);
     }
     return (
       <StyledTreeItem
-        key={parentName===undefined? treeItemData.name:(parentName+'-'+treeItemData.name)}
-        nodeId={parentName===undefined? treeItemData.name:(parentName+'-'+treeItemData.name)}
+        key={parentName}
+        nodeId={parentName}
         label={treeItemData.name}
         children={children}
         onClick={(e) => {

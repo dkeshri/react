@@ -21,6 +21,7 @@ export const NavBar = React.memo(() => {
         console.log(nodeIds)
     }
     const setSelectedItemNodeId = (nodeId) => {
+        console.log(nodeId)
         setMenuItemSelectedState(nodeId);
     }
     return (
