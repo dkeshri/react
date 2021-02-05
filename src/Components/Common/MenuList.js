@@ -6,7 +6,7 @@ import TreeView from '@material-ui/lab/TreeView';
 import TreeItem from '@material-ui/lab/TreeItem';
 import Collapse from '@material-ui/core/Collapse';
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
-import { config } from '../../data/Config'
+import { config } from '../../data/NavMenuListConfig'
 import { useHistory } from 'react-router-dom'
 function MinusSquare(props) {
   return (
@@ -76,33 +76,27 @@ const useStyles = makeStyles({
   },
 });
 var history;
-const getTreeItemsFromData = (treeItems,toggleDrawer,parentName) => {
-  
-  const onClickTreeItem = (path,e) => {
-    if (path !== undefined){
+const getTreeItemsFromData = (treeItems, toggleDrawer, parentName) => {
+
+  const onClickTreeItem = (path, e) => {
+    if (path !== undefined) {
       history.push(path);
       toggleDrawer(false)(e);
     }
-     
   }
   return treeItems.map(treeItemData => {
     let children = undefined;
-    if(parentName===undefined){
-      parentName = treeItemData.name;
-    }else{
-      parentName = parentName+'-'+treeItemData.name;
-    }
     if (treeItemData.children && treeItemData.children.length > 0) {
-      children = getTreeItemsFromData(treeItemData.children,toggleDrawer,parentName);
+      children = getTreeItemsFromData(treeItemData.children, toggleDrawer, parentName === undefined ? treeItemData.name : parentName + '-' + treeItemData.name);
     }
     return (
       <StyledTreeItem
-        key={parentName}
-        nodeId={parentName}
+        key={parentName === undefined ? treeItemData.name : parentName + '-' + treeItemData.name}
+        nodeId={parentName === undefined ? treeItemData.name : parentName + '-' + treeItemData.name}
         label={treeItemData.name}
         children={children}
         onClick={(e) => {
-          onClickTreeItem(treeItemData.path,e);
+          onClickTreeItem(treeItemData.path, e);
         }}
       />
     );
@@ -127,7 +121,7 @@ function MenuList(props) {
         props.menuItemProps.pushMenuItemNodeIds(ids);
       }}
     >
-      {getTreeItemsFromData(config.menuItems,props.menuItemProps.toggleDrawer)}
+      {getTreeItemsFromData(config.menuItems, props.menuItemProps.toggleDrawer)}
     </TreeView>
   );
 }

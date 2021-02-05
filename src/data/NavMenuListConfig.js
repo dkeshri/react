@@ -1,7 +1,4 @@
 const config = {
-    admin: {
-
-    },
     menuItems: [
         {
             name: 'Components',
@@ -36,24 +33,24 @@ const config = {
                                     children: [{
                                         name: 'Test',
                                         children: [
-                
-                
-                
-                                            
+
+
+
+
                                         ]
                                     }]
-                                },{
-                                    name:'Link1',
-                                    path:'/Test'
+                                }, {
+                                    name: 'Link1',
+                                    path: '/Test'
                                 }]
                             }
 
 
                         ]
                     }]
-                },{
-                    name:'Link1',
-                    path:'/Test'
+                }, {
+                    name: 'Link1',
+                    path: '/Test'
                 }]
             }]
         },

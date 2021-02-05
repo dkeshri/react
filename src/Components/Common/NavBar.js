@@ -3,7 +3,6 @@ import Drawer from '../Common/Drawer'
 import '../../assets/css/navbar.css'
 // renaming is not allowed. if you want to rename export default
 var tempSelectedNodeList = [];
-var tempSelectedNode;
 export const NavBar = React.memo(() => {
 
     const [isDrawerOpened, setDrawerOpenState] = useState(false);
