@@ -6,8 +6,8 @@ import TreeView from '@material-ui/lab/TreeView';
 import TreeItem from '@material-ui/lab/TreeItem';
 import Collapse from '@material-ui/core/Collapse';
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
-import {config} from '../../data/Config'
-
+import { config } from '../../data/Config'
+import { useHistory } from 'react-router-dom'
 function MinusSquare(props) {
   return (
     <SvgIcon fontSize="inherit" style={{ width: 14, height: 14 }} {...props}>
@@ -75,11 +75,20 @@ const useStyles = makeStyles({
     maxWidth: 400,
   },
 });
-const getTreeItemsFromData = treeItems => {
+var history;
+const getTreeItemsFromData = (treeItems,toggleDrawer) => {
+  
+  const onClickTreeItem = (path,e) => {
+    if (path !== undefined){
+      history.push(path);
+      toggleDrawer(false)(e);
+    }
+     
+  }
   return treeItems.map(treeItemData => {
     let children = undefined;
     if (treeItemData.children && treeItemData.children.length > 0) {
-      children = getTreeItemsFromData(treeItemData.children);
+      children = getTreeItemsFromData(treeItemData.children,toggleDrawer);
     }
     return (
       <StyledTreeItem
@@ -87,30 +96,33 @@ const getTreeItemsFromData = treeItems => {
         nodeId={treeItemData.id}
         label={treeItemData.name}
         children={children}
+        onClick={(e) => {
+          onClickTreeItem(treeItemData.path,e);
+        }}
       />
     );
   });
 };
- function MenuList(props) {
+function MenuList(props) {
   const classes = useStyles();
-
+  history = useHistory();
   return (
     <TreeView
       className={classes.root}
-      defaultExpanded={props.menuItemProps.menuItemSelected}
+      defaultExpanded={props.menuItemProps.menuItemSelectedList}
       defaultCollapseIcon={<MinusSquare />}
       defaultExpandIcon={<PlusSquare />}
       defaultEndIcon={<CloseSquare />}
-      onNodeSelect={(e,value)=>{
-        console.log(e);
-        console.log(value);
-        console.log('onNodeSelectr')
+      multiSelect={false}
+      selected={props.menuItemProps.menuItemSelected}
+      onNodeSelect={(e, value) => {
+        props.menuItemProps.setSelectedItemNodeId(value);
       }}
-      onNodeToggle = {(e,ids)=>{
+      onNodeToggle={(e, ids) => {
         props.menuItemProps.pushMenuItemNodeIds(ids);
       }}
     >
-      {getTreeItemsFromData(config.menuItems)}
+      {getTreeItemsFromData(config.menuItems,props.menuItemProps.toggleDrawer)}
     </TreeView>
   );
 }

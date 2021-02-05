@@ -8,7 +8,8 @@ const config = {
             name:'Home',
             children:[{
                 id: 'sunfolder',
-                name: 'Spring1',
+                name: 'TestUrl',
+                path:'/Test',
                 children: []
             }]
         },
@@ -17,7 +18,8 @@ const config = {
             name:'About',
             children:[{
                 id: 'sunfolder2',
-                name: 'Spring2',
+                name: 'Home',
+                path:'/Home',
                 children: []
             }]
         }

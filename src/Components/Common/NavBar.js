@@ -2,20 +2,26 @@ import React, { useState } from 'react'
 import Drawer from '../Common/Drawer'
 import '../../assets/css/navbar.css'
 // renaming is not allowed. if you want to rename export default
-var tempSelectedNode = ['1'];
+var tempSelectedNodeList = ['1'];
+var tempSelectedNode;
 export const NavBar = React.memo(() => {
 
     const [isDrawerOpened, setDrawerOpenState] = useState(false);
     const toggleDrawer = (open) => (event) => {
         if(open===false){
-            setMenuItemSelected(tempSelectedNode);
+            setMenuItemSelectedList(tempSelectedNodeList);
+            
         }
         setDrawerOpenState(open);
     };
 
-    const [menuItemSelected, setMenuItemSelected] = useState(tempSelectedNode);
+    const [menuItemSelectedList, setMenuItemSelectedList] = useState(tempSelectedNodeList);
+    const [menuItemSelected, setMenuItemSelectedState] = useState('1');
     const pushMenuItemNodeIds = (nodeIds) => {
-        tempSelectedNode = nodeIds;
+        tempSelectedNodeList = nodeIds;
+    }
+    const setSelectedItemNodeId = (nodeId) => {
+        setMenuItemSelectedState(nodeId);
     }
     return (
         <>
@@ -32,7 +38,7 @@ export const NavBar = React.memo(() => {
             <Drawer
                 isDrawerOpened={isDrawerOpened}
                 toggleDrawer={toggleDrawer}
-                menuItemProps={{ menuItemSelected, pushMenuItemNodeIds }}
+                menuItemProps={{ menuItemSelected,menuItemSelectedList, pushMenuItemNodeIds,setSelectedItemNodeId,toggleDrawer }}
             />
         </>
     )
