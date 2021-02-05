@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Drawer from '../Common/Drawer'
 import '../../assets/css/navbar.css'
 // renaming is not allowed. if you want to rename export default
-var tempSelectedNodeList = ['Home'];
+var tempSelectedNodeList = [];
 var tempSelectedNode;
 export const NavBar = React.memo(() => {
 
@@ -10,7 +10,6 @@ export const NavBar = React.memo(() => {
     const toggleDrawer = (open) => (event) => {
         if(open===false){
             setMenuItemSelectedList(tempSelectedNodeList);
-            
         }
         setDrawerOpenState(open);
     };
@@ -19,6 +18,7 @@ export const NavBar = React.memo(() => {
     const [menuItemSelected, setMenuItemSelectedState] = useState('Home');
     const pushMenuItemNodeIds = (nodeIds) => {
         tempSelectedNodeList = nodeIds;
+        console.log(nodeIds)
     }
     const setSelectedItemNodeId = (nodeId) => {
         setMenuItemSelectedState(nodeId);

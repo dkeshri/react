@@ -4,6 +4,22 @@ const config = {
     },
     menuItems:[
         {
+            name:'About1',
+            children:[{
+                name: 'Test',
+                path:'/Test',
+                children: []
+            }]
+        },
+        {
+            name:'About2',
+            children:[{
+                name: 'Test',
+                path:'/Test',
+                children: []
+            }]
+        },
+        {
             name:'Home',
             path:'/Home'  
         },
