@@ -4,22 +4,14 @@ const config = {
     },
     menuItems:[
         {
-            id:'1',
             name:'Home',
-            children:[{
-                id: 'sunfolder',
-                name: 'TestUrl',
-                path:'/Test',
-                children: []
-            }]
+            path:'/Home'  
         },
         {
-            id:'2',
             name:'About',
             children:[{
-                id: 'sunfolder2',
-                name: 'Home',
-                path:'/Home',
+                name: 'Test',
+                path:'/Test',
                 children: []
             }]
         }

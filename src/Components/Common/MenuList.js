@@ -76,7 +76,7 @@ const useStyles = makeStyles({
   },
 });
 var history;
-const getTreeItemsFromData = (treeItems,toggleDrawer) => {
+const getTreeItemsFromData = (treeItems,toggleDrawer,parentName) => {
   
   const onClickTreeItem = (path,e) => {
     if (path !== undefined){
@@ -88,12 +88,12 @@ const getTreeItemsFromData = (treeItems,toggleDrawer) => {
   return treeItems.map(treeItemData => {
     let children = undefined;
     if (treeItemData.children && treeItemData.children.length > 0) {
-      children = getTreeItemsFromData(treeItemData.children,toggleDrawer);
+      children = getTreeItemsFromData(treeItemData.children,toggleDrawer,treeItemData.name);
     }
     return (
       <StyledTreeItem
-        key={treeItemData.id}
-        nodeId={treeItemData.id}
+        key={parentName===undefined? treeItemData.name:(parentName+'-'+treeItemData.name)}
+        nodeId={parentName===undefined? treeItemData.name:(parentName+'-'+treeItemData.name)}
         label={treeItemData.name}
         children={children}
         onClick={(e) => {
