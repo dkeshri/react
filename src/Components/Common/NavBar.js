@@ -18,10 +18,8 @@ export const NavBar = React.memo(() => {
     const [menuItemSelected, setMenuItemSelectedState] = useState('Home');
     const pushMenuItemNodeIds = (nodeIds) => {
         tempSelectedNodeList = nodeIds;
-        console.log(nodeIds)
     }
     const setSelectedItemNodeId = (nodeId) => {
-        console.log(nodeId)
         setMenuItemSelectedState(nodeId);
     }
     return (

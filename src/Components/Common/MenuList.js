@@ -80,8 +80,8 @@ const getTreeItemsFromData = (treeItems,toggleDrawer,parentName) => {
   
   const onClickTreeItem = (path,e) => {
     if (path !== undefined){
-      // history.push(path);
-      // toggleDrawer(false)(e);
+      history.push(path);
+      toggleDrawer(false)(e);
     }
      
   }

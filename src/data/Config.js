@@ -4,6 +4,22 @@ const config = {
     },
     menuItems: [
         {
+            name: 'Components',
+            children: [{
+                name: 'From1',
+                path: '/Test',
+                children: []
+            }]
+        },
+        {
+            name: 'Javascript Concepts',
+            children: [{
+                name: 'Test',
+                path: '/Test',
+                children: []
+            }]
+        },
+        {
             name: 'About1',
             children: [{
                 name: 'Test',
