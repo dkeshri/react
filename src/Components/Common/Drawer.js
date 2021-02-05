@@ -13,7 +13,6 @@ const useStyles = makeStyles({
 });
 
 function Drawer(props) {
-  console.log(props.isDrawerOpened);
   const classes = useStyles();
   const list = (anchor) => (
     <div
@@ -22,7 +21,7 @@ function Drawer(props) {
       })}
       role="presentation"
     >
-      <MenuList/>
+      <MenuList menuItemProps={props.menuItemProps} />
     </div>
   );
 

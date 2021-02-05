@@ -75,16 +75,24 @@ const useStyles = makeStyles({
   },
 });
 
- function MenuList() {
+ function MenuList(props) {
   const classes = useStyles();
 
   return (
     <TreeView
       className={classes.root}
-      defaultExpanded={['1']}
+      defaultExpanded={props.menuItemProps.menuItemSelected}
       defaultCollapseIcon={<MinusSquare />}
       defaultExpandIcon={<PlusSquare />}
       defaultEndIcon={<CloseSquare />}
+      onNodeSelect={(e,value)=>{
+        console.log(e);
+        console.log(value);
+        console.log('onNodeSelectr')
+      }}
+      onNodeToggle = {(e,ids)=>{
+        props.menuItemProps.pushMenuItemNodeIds(ids);
+      }}
     >
       <StyledTreeItem nodeId="1" label="Main">
         <StyledTreeItem nodeId="2" label="Hello" />
