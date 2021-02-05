@@ -5,10 +5,7 @@ import '../../assets/css/navbar.css'
 export function NavBar() {
 
     const [isDrawerOpened, setDrawerOpenState] = useState(false);
-    const toggleDrawer = (open) => (event) => {
-        if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-          return;
-        }
+    const toggleDrawer = (open)=>(event) => {
         setDrawerOpenState(open);
       };
     
