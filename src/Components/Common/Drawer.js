@@ -5,7 +5,7 @@ import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import MenuList from '../Common/MenuList'
 const useStyles = makeStyles({
   list: {
-    width: 250,
+    width: 300,
   },
   fullList: {
     width: 'auto',
