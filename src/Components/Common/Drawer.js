@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Drawer(props) {
+function Drawer(props) {
   console.log(props.isDrawerOpened);
   const classes = useStyles();
   const list = (anchor) => (
@@ -37,3 +37,4 @@ export default function Drawer(props) {
     </SwipeableDrawer>
   );
 }
+export default React.memo(Drawer);

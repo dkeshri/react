@@ -75,7 +75,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MenuList() {
+ function MenuList() {
   const classes = useStyles();
 
   return (
@@ -103,3 +103,4 @@ export default function MenuList() {
     </TreeView>
   );
 }
+export default React.memo(MenuList);

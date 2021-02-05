@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Drawer from '../Common/Drawer'
 import '../../assets/css/navbar.css'
 // renaming is not allowed. if you want to rename export default
-export function NavBar() {
+export const NavBar = React.memo(()=> {
 
     const [isDrawerOpened, setDrawerOpenState] = useState(false);
     const toggleDrawer = (open)=>(event) => {
@@ -25,3 +25,4 @@ export function NavBar() {
         </>
     )
 }
+);
