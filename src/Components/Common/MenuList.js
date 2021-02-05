@@ -6,6 +6,7 @@ import TreeView from '@material-ui/lab/TreeView';
 import TreeItem from '@material-ui/lab/TreeItem';
 import Collapse from '@material-ui/core/Collapse';
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
+import {config} from '../../data/Config'
 
 function MinusSquare(props) {
   return (
@@ -74,7 +75,22 @@ const useStyles = makeStyles({
     maxWidth: 400,
   },
 });
-
+const getTreeItemsFromData = treeItems => {
+  return treeItems.map(treeItemData => {
+    let children = undefined;
+    if (treeItemData.children && treeItemData.children.length > 0) {
+      children = getTreeItemsFromData(treeItemData.children);
+    }
+    return (
+      <StyledTreeItem
+        key={treeItemData.id}
+        nodeId={treeItemData.id}
+        label={treeItemData.name}
+        children={children}
+      />
+    );
+  });
+};
  function MenuList(props) {
   const classes = useStyles();
 
@@ -94,7 +110,7 @@ const useStyles = makeStyles({
         props.menuItemProps.pushMenuItemNodeIds(ids);
       }}
     >
-      <StyledTreeItem nodeId="1" label="Main">
+      {/* <StyledTreeItem nodeId="1" label="Main">
         <StyledTreeItem nodeId="2" label="Hello" />
         <StyledTreeItem nodeId="3" label="Subtree with children">
           <StyledTreeItem nodeId="6" label="Hello" />
@@ -107,7 +123,8 @@ const useStyles = makeStyles({
         </StyledTreeItem>
         <StyledTreeItem nodeId="4" label="World" />
         <StyledTreeItem nodeId="5" label="Something something" />
-      </StyledTreeItem>
+      </StyledTreeItem> */}
+      {getTreeItemsFromData(config.menuItems)}
     </TreeView>
   );
 }
