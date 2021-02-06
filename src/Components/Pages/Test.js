@@ -1,8 +1,8 @@
 import React from 'react'
-
+import '../../assets/css/Pages/Test.css'
 function Test() {
     return (
-        <div>
+        <div className="Testcontainer">
             Test page
         </div>
     )

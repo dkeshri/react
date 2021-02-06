@@ -71,6 +71,10 @@ const config = {
             }]
         },
         {
+            name: 'Test',
+            path: '/Test'
+        },
+        {
             name: 'Home',
             path: '/Home'
         },
