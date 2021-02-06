@@ -1,9 +1,9 @@
 .Home-container{
     /* background: url('../../../img/img-1.jpg') center center/cover no-repeat; */
-    min-height: calc(100vh - 2rem);
+    min-height: calc(100vh - 3rem);
     width: 100%;
     display: flex;
-    background-color: rgb(245, 238, 238);
+    background-color: rgb(228, 139, 139);
     align-items: center;
     justify-content: center;
 }

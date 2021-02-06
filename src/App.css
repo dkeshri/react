@@ -39,6 +39,5 @@ li{
   list-style: none;
 }
 .mainContentSection {
-  background-color: var(--secondaryColor);
-  padding: 15px 15px;
+
 }

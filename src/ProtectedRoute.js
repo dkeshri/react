@@ -9,7 +9,7 @@ const mainContentSectionVariants = {
     },
     in: {
         opacity: 1,
-        transition: { duration: .8 ,}
+        transition: { duration: .5 ,}
     },
     exit: {
         x: '-100vw',
