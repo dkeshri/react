@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, useLocation } from 'react-router-dom'
+import { Switch, Route, useLocation } from 'react-router-dom'
 import { ProtectedRoute } from './ProtectedRoute'
 import Home from './Components/Home'
 import PageNotFound from './Components/Common/PageNotFound'
