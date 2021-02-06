@@ -9,11 +9,11 @@ const mainContentSectionVariants = {
     },
     in: {
         opacity: 1,
-        transition: { duration: 1 }
+        transition: { duration: .8 ,}
     },
     exit: {
         x: '-100vw',
-        transition: { ease: 'easeInOut' }
+        transition: {duration:.5, ease: 'easeInOut' }
     }
 }
 export const ProtectedRoute = (props) => {
