@@ -3,9 +3,13 @@ const config = {
         {
             name: 'Components',
             children: [{
-                name: 'From1',
-                path: '/Test',
-                children: []
+                name: 'Froms',
+                children: [
+                    {
+                        name:'Formic',
+                        path:'/Components/Forms/Formic'
+                    }
+                ]
             }]
         },
         {

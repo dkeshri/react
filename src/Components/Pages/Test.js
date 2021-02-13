@@ -2,7 +2,7 @@ import React from 'react'
 import '../../assets/css/Pages/Test.css'
 function Test() {
     return (
-        <div className="Testcontainer">
+        <div className=" pageContainer Testcontainer">
             Test page
         </div>
     )

@@ -6,7 +6,7 @@
   --scrollColor:#b3b6bb;/*ced1d8*/
   --scrollBGColor:rgb(236, 229, 229);
   --scrollBorderColor:#6e6f70;
-  --bannerTextSecondaryColor:rgb(113,57, 79);
+  --bannerTextSecondaryColor:#595f6d;
   --skillBGColor:white;
   --skillColor:var(--primaryColor);
   --skillProgressBarBorderColor:#1d8997;
@@ -39,5 +39,10 @@ li{
   list-style: none;
 }
 .mainContentSection {
-
+position: relative;
+}
+.pageContainer{
+  padding: 20px;
+  min-height: calc(100vh - 3rem);
+  background-color: rgb(251, 249, 249);
 }
