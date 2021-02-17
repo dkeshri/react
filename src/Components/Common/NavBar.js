@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import Drawer from '../Common/Drawer'
 import '../../assets/css/navbar.css'
+import { useHistory } from 'react-router-dom'
 import PageSearchBox from '../Common/PageSearch'
 // renaming is not allowed. if you want to rename export default
 var tempSelectedNodeList = [];
 var selectedNode = 'Home';
 var searchBoxSeletedItem = {};
 export const NavBar = React.memo(() => {
-
+    const history = useHistory();
     const [isDrawerOpened, setDrawerOpenState] = useState(false);
     const toggleDrawer = (open) => (event) => {
         if (open === false) {
@@ -22,6 +23,7 @@ export const NavBar = React.memo(() => {
     }
     const onChangeSearchBox = (selectedItem) =>{
         searchBoxSeletedItem = selectedItem;
+        history.push(selectedItem.value)
     }
     const setSelectedItemNodeId = (nodeId) => {
         setMenuItemSelectedState(nodeId);

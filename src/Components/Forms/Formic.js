@@ -3,7 +3,6 @@ import Header from '../Common/Header'
 import Title from '../Common/Title'
 import style from '../../assets/css/components/forms/Formic.module.css'
 function Formic() {
-    console.log(style);
     return (
         <div className={`${style.container} pageContainer`}>
             <Header title={"Formic Demos"}/>

@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 import Select from 'react-select';
-import { useHttpRequest } from '../../ApiCall';
 import { makeStyles } from '@material-ui/core/styles';
 import { config } from '../../data/NavMenuListConfig';
-import { useHistory } from 'react-router-dom'
+
 const optionList = [];
 const getItemFromMenuConfig = (MenuConfig) => {
     MenuConfig.map(item => {
@@ -13,7 +12,7 @@ const getItemFromMenuConfig = (MenuConfig) => {
         if (item.path !== undefined)
             optionList.push({ value: item.path, label: item.name });
     });
-   // return optionList;
+    //return optionList;
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -24,30 +23,21 @@ const useStyles = makeStyles((theme) => ({
 
     }
 }));
-function PageSearch({seacrchBoxProps}) {
-    const [menuOptions, setMenuOptions] = useState([]);
-    const history = useHistory();
+function PageSearch({ seacrchBoxProps }) {
     useEffect(() => {
-        getItemFromMenuConfig(config.menuItems);
-        setMenuOptions(optionList);
+        if (optionList.length === 0)
+            getItemFromMenuConfig(config.menuItems);
     }, []);
-    const onChangeSearchBox = (selectedItem) => {
-        if(selectedItem.value!==undefined){
-            //navigate to the path 
-            //seacrchBoxProps.onChangeSearchBox(selectedItem)
-            history.push(selectedItem.value)
-        }
-    }
     const classes = useStyles();
     return (
         <div>
             <Select
                 name="form-field-name"
                 options={optionList}
-                onChange={onChangeSearchBox}
+                onChange={seacrchBoxProps.onChangeSearchBox}
                 className={classes.SelectStyle}
                 placeholder={'Search Topic'}
-                // value={seacrchBoxProps.searchBoxSeletedItem}
+                value={seacrchBoxProps.searchBoxSeletedItem}
                 padding={'20px'}
             />
         </div>
