@@ -6,7 +6,7 @@ import PageSearchBox from '../Common/PageSearch'
 // renaming is not allowed. if you want to rename export default
 var tempSelectedNodeList = [];
 var selectedNode = 'Home';
-var searchBoxSeletedItem = {};
+var searchBoxSeletedItem;
 export const NavBar = React.memo(() => {
     const history = useHistory();
     const [isDrawerOpened, setDrawerOpenState] = useState(false);
