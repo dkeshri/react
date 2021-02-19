@@ -1,13 +1,21 @@
 const config = {
     menuItems: [
         {
+            name: 'Home',
+            path: '/Home'
+        },
+        {
+            name: 'Test',
+            path: '/Test'
+        },
+        {
             name: 'Components',
             children: [{
                 name: 'Froms',
                 children: [
                     {
-                        name:'Formic',
-                        path:'/Components/Forms/Formic'
+                        name: 'Formic',
+                        path: '/Components/Forms/Formic'
                     }
                 ]
             }]
@@ -15,7 +23,7 @@ const config = {
         {
             name: 'Javascript Concepts',
             children: [{
-                name: 'Test',
+                name: 'Array Destructuring',
                 path: '/Test',
                 children: []
             }]
@@ -23,73 +31,24 @@ const config = {
         {
             name: 'CSS',
             children: [{
-                name: 'Test',
+                name: 'Gradient',
                 path: '/Test',
                 children: []
             }]
         },
         {
-            name: 'About1',
+            name: 'HooksConcepts',
             children: [{
-                name: 'Test',
-                children: [{
-                    name: 'About2',
-                    children: [{
-                        name: 'Test',
-                        children: [
-
-                            {
-                                name: 'Test',
-                                children: [{
-                                    name: 'About2',
-                                    children: [{
-                                        name: 'Test',
-                                        children: [
-
-
-
-
-                                        ]
-                                    }]
-                                }, {
-                                    name: 'Link1',
-                                    path: '/Test'
-                                }]
-                            }
-
-
-                        ]
-                    }]
-                }, {
-                    name: 'Link1',
-                    path: '/Test'
-                }]
-            }]
-        },
-        {
-            name: 'About2',
-            children: [{
-                name: 'Test',
-                path: '/Test',
+                name: 'CustomHooksDemo',
+                path: '/CustomHooksDemo',
                 children: []
             }]
+
         },
         {
-            name: 'Test',
-            path: '/Test'
-        },
-        {
-            name: 'Home',
-            path: '/Home'
-        },
-        {
-            name: 'CustomHooksDemo',
-            path: '/CustomHooksDemo'
-        },
-        {
-            name: 'About',
+            name: 'AboutUS',
             children: [{
-                name: 'Test',
+                name: 'About',
                 path: '/Test',
                 children: []
             }]
