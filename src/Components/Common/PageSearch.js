@@ -5,7 +5,7 @@ import { config } from '../../data/NavMenuListConfig';
 
 const optionList = [];
 const getItemFromMenuConfig = (MenuConfig) => {
-    MenuConfig.map(item => {
+    MenuConfig.forEach(item => {
         if (item.children !== undefined && item.children.length !== 0) {
             getItemFromMenuConfig(item.children);
         }
