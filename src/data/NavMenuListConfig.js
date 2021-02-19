@@ -83,6 +83,10 @@ const config = {
             path: '/Home'
         },
         {
+            name: 'CustomHooksDemo',
+            path: '/CustomHooksDemo'
+        },
+        {
             name: 'About',
             children: [{
                 name: 'Test',

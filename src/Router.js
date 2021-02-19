@@ -7,6 +7,7 @@ import Login from './Components/OpenPage/Login'
 import Test from './Components/Pages/Test'
 import { AnimatePresence } from 'framer-motion'
 import FormicForm from './Components/Forms/Formic'
+import CustomHooksDemo from './Components/Dropdown'
 export const AppRouter = () => {
     const location = useLocation();
     return (
@@ -17,6 +18,7 @@ export const AppRouter = () => {
                 <ProtectedRoute path="/Home" exact component={Home} />
                 <ProtectedRoute path="/Test" exact component={Test} />
                 <ProtectedRoute path="/Components/Forms/Formic" exact component={FormicForm} />
+                <ProtectedRoute path="/CustomHooksDemo" exact component={CustomHooksDemo} />
                 <Route path="*" exact component={PageNotFound} />
             </Switch>
         </AnimatePresence>
