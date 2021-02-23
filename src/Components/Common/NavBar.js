@@ -3,6 +3,7 @@ import Drawer from '../Common/Drawer'
 import '../../assets/css/navbar.css'
 import { useHistory } from 'react-router-dom'
 import PageSearchBox from '../Common/PageSearch'
+import Logo from './Logo'
 // renaming is not allowed. if you want to rename export default
 var tempSelectedNodeList = [];
 var selectedNode = 'Home';
@@ -36,9 +37,7 @@ export const NavBar = React.memo(() => {
         <>
             <nav>
                 <div className="logo-container">
-                    <div className="logo_img">
-                        <img  src={require('../../assets/img/logo/TWLogo.png')}></img>
-                    </div>
+                    <Logo/>
                     <div className="hamburger" onClick={toggleDrawer(true)}>
                         <div className="line"></div>
                         <div className="line"></div>
