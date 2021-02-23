@@ -21,7 +21,7 @@ export const NavBar = React.memo(() => {
     const pushMenuItemNodeIds = (nodeIds) => {
         tempSelectedNodeList = nodeIds;
     }
-    const onChangeSearchBox = (selectedItem) =>{
+    const onChangeSearchBox = (selectedItem) => {
         searchBoxSeletedItem = selectedItem;
         history.push(selectedItem.value)
     }
@@ -29,18 +29,25 @@ export const NavBar = React.memo(() => {
         setMenuItemSelectedState(nodeId);
         selectedNode = nodeId;
     }
+    const style = {
+        img: { "height": "100%", "width": "250px" }
+    }
     return (
         <>
             <nav>
-                <div className="hamburger" onClick={toggleDrawer(true)}>
-                    <div className="line"></div>
-                    <div className="line"></div>
-                    <div className="line"></div>
+                <div className="logo-container">
+                    <div className="logo_img">
+                        <img  src={require('../../assets/img/logo/TWLogo.png')}></img>
+                    </div>
+                    <div className="hamburger" onClick={toggleDrawer(true)}>
+                        <div className="line"></div>
+                        <div className="line"></div>
+                        <div className="line"></div>
+                    </div>
                 </div>
 
-                <div className="logo-container">
-                    <PageSearchBox seacrchBoxProps={{searchBoxSeletedItem,onChangeSearchBox}} />
-                    <h3 className="logo">Deepak<span>_keshri</span></h3>
+                <div className="SearchBox">
+                    <PageSearchBox seacrchBoxProps={{ searchBoxSeletedItem, onChangeSearchBox }} />
                 </div>
             </nav>
             <Drawer

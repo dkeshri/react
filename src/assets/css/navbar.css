@@ -23,5 +23,15 @@ nav{
   }
   .logo-container{
     display: flex;
+    
+    align-items: center;
   }
-  
+  .SearchBox{
+    display: flex;
+  }
+  .logo_img{
+    height: 100%;
+    margin-left: 10px;
+    object-fit: cover;
+    overflow: hidden;
+  }
