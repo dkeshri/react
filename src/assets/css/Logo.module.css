@@ -17,6 +17,7 @@
     align-items: center;
     height: inherit;
     width: inherit;
+    cursor: pointer;
 }
 .span_subtitle{
     position:absolute;
@@ -27,4 +28,7 @@
 .h1{
     font-family: serif;
     text-shadow: 0px 2px 10px rgb(71 69 69);
+}
+.logo_container:hover{
+   
 }

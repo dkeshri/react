@@ -1,5 +1,5 @@
 import React from 'react'
-import '../assets/css/SocialMediaIcons.css'
+import '../../assets/css/SocialMediaIcons.css'
 function SocialMediaIcons() {
     return (
         <div className='social-icons'>

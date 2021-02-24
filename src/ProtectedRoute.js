@@ -2,7 +2,7 @@ import React from 'react'
 import { Redirect } from 'react-router-dom'
 import { NavBar } from './Components/Common/NavBar'
 import { motion } from 'framer-motion'
-// import Footer from './Components/Footer'
+import Footer from './Components/Common/Footer'
 const mainContentSectionVariants = {
     init: {
         opacity: 0
@@ -30,9 +30,9 @@ export const ProtectedRoute = (props) => {
                 exit="exit">
                 <Component />
             </motion.div>
-            {/* <div style={{color:"white"}} className="footer">
+            <div style={{color:"white"}} className="footer">
                 <Footer/>
-            </div> */}
+            </div>
         </div>
     </>
     ) : (
