@@ -1,0 +1,12 @@
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .social-icon-link {
+    font-size: 24px;
+  }
+  .social-icons *{
+    padding: 0 .25rem;
+  }
+  
