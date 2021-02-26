@@ -35,3 +35,25 @@ nav{
     object-fit: cover;
     overflow: hidden;
   }
+  .pageSearchCss{
+    width: 600px;
+    color: black;
+  }
+  @media screen and (max-width:1024px){
+    .pageSearchCss{
+      width: 400px;
+    }
+  }
+  @media screen and (max-width:768px){
+    nav{
+      transition: all .3s ease-in-out;
+    }
+    .pageSearchCss{
+      width: 300px;
+    }
+  }
+  @media screen and (max-width:480){
+    .pageSearchCss{
+      width: 200px;
+    }
+  }

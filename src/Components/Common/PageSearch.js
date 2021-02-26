@@ -17,9 +17,7 @@ const getItemFromMenuConfig = (MenuConfig) => {
 
 const useStyles = makeStyles((theme) => ({
     SelectStyle: {
-        width: '250px',
-        color: 'black',
-        margin: '0 20px'
+       
 
     }
 }));
@@ -35,7 +33,7 @@ function PageSearch({ seacrchBoxProps }) {
                 name="form-field-name"
                 options={optionList}
                 onChange={seacrchBoxProps.onChangeSearchBox}
-                className={classes.SelectStyle}
+                className="pageSearchCss"
                 placeholder={'Search Topic'}
                 value={seacrchBoxProps.searchBoxSeletedItem}
                 padding={'20px'}
