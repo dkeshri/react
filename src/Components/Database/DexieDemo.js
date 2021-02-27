@@ -1,19 +1,13 @@
 import React, { useEffect } from 'react'
 import PageContaier from '../Common/PageContainer'
 import style from '../../assets/css/components/Database/DexieDemo.module.css'
-import Dexie from 'dexie'
-import {useLiveQuery} from 'dexie-react-hooks'
-const db = new Dexie('MarketList');
-db.version(1).stores(
-    {items:"++id,name,price"}
-);
+import {Database} from '../../utility'
+const db = new Database('deepak1','Tocket');
+db.createDatabaseSchema("++id,name,price");
 const DexieDemo = () => {
-    useEffect(()=>{
-        console.log(db.items.toArray());
-    },[db.items]);
     const addItemToDb = async (event,item) =>{
         event.preventDefault();
-        await db.items.add(item);
+        db.addRecord(item).then(data=>{console.log(data)}).catch(e=>{console.log(e)});
     }
     const removeItemFromDb = async id =>{
         await db.items.delete(id);

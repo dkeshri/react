@@ -1,5 +1,5 @@
 import cookie from 'react-cookies'
-
+import Dexie from 'dexie'
 export const setCookie = (argCookies = {}) => {
     let expires, path;
     if (argCookies.expires === undefined || argCookies.expires === null) {
@@ -41,3 +41,26 @@ export const getCookie = (key) => {
 
 }
 export const Year = (new Date()).getFullYear();
+export class Database {
+    constructor(databaseName,tableName) {
+        this.db = new Dexie(databaseName);
+        this.tableName = tableName;
+    }
+    createDatabaseSchema = (Colunms) => {
+        let obj = new Object();
+        obj[this.tableName] = Colunms;
+        this.db.version(1).stores(obj);
+    }
+    addRecord = (item)=>{
+        let promise = new Promise((resolve,reject)=>{
+            this.db[this.tableName].add(item)
+            .then(res=>{
+                resolve(res);
+            })
+            .catch((e)=>{
+                reject(new Error(e));
+            })
+        });
+        return promise;
+    }
+}
