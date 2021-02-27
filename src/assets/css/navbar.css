@@ -13,6 +13,7 @@ nav{
 }
 .hamburger{
     cursor: pointer;
+    display: none;
   }
   .line{
     width: 2rem;
@@ -44,9 +45,16 @@ nav{
       width: 400px;
     }
   }
+  .hamburger:hover{
+    transform: scale(1.2);
+    transition: all .3s ease-in-out;
+  }
   @media screen and (max-width:768px){
     nav{
       transition: all .3s ease-in-out;
+    }
+    .hamburger{
+      display: block;
     }
     .pageSearchCss{
       width: 300px;
