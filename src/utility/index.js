@@ -40,3 +40,4 @@ export const getCookie = (key) => {
     }
 
 }
+export const Year = (new Date()).getFullYear();
