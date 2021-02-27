@@ -1,20 +1,24 @@
 import React from 'react'
-import Header from '../Common/Header'
-import Title from '../Common/Title'
 import style from '../../assets/css/components/forms/Formic.module.css'
+import PageContainer from '../Common/PageContainer'
 function Formic() {
     return (
-        <div className={`${style.container} pageContainer`}>
-            <Header title={"Formic Demos"}/>
-            <div className={style.contentContainer}>
-                <Title title={"Registration Form"}/>
-                <div className={`${style.box}`}>
-                    <div>
-                        Registration Form
-                    </div>
+        <PageContainer
+            headerTitle="Formic Demos"
+            title="Registration Form"
+        // backgroundColor="#546874"
+        >
+            <div className={`box`}>
+                <div>
+                    Registration Form
                 </div>
             </div>
-        </div>
+            <div className={`box ${style.box}`}>
+                <div>
+                    Registration Form
+                </div>
+            </div>
+        </PageContainer>
     )
 }
 
