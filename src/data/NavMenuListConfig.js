@@ -46,6 +46,15 @@ const config = {
 
         },
         {
+            name: 'DatabaseConcept',
+            children: [{
+                name: 'Dexie Database',
+                path: '/Database/Dexie',
+                children: []
+            }]
+
+        },
+        {
             name: 'AboutUS',
             children: [{
                 name: 'About',

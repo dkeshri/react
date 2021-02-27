@@ -8,6 +8,7 @@ import Test from './Components/Pages/Test'
 import { AnimatePresence } from 'framer-motion'
 import FormicForm from './Components/Forms/Formic'
 import CustomHooksDemo from './Components/Dropdown'
+import DexieDemo from './Components/Database/DexieDemo'
 export const AppRouter = () => {
     const location = useLocation();
     return (
@@ -19,6 +20,8 @@ export const AppRouter = () => {
                 <ProtectedRoute path="/Test" exact component={Test} />
                 <ProtectedRoute path="/Components/Forms/Formic" exact component={FormicForm} />
                 <ProtectedRoute path="/CustomHooksDemo" exact component={CustomHooksDemo} />
+                <ProtectedRoute path="/Database/Dexie" exact component={DexieDemo} />
+               
                 <Route path="*" exact component={PageNotFound} />
             </Switch>
         </AnimatePresence>
