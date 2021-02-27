@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PageContaier from '../Common/PageContainer'
 import style from '../../assets/css/components/Database/DexieDemo.module.css'
 import Dexie from 'dexie'
@@ -8,10 +8,9 @@ db.version(1).stores(
     {items:"++id,name,price"}
 );
 const DexieDemo = () => {
-    const allItems = useLiveQuery(
-        ()=>db.items.toArray()
-    ,[]);
-    console.log(allItems);
+    useEffect(()=>{
+        console.log(db.items.toArray());
+    },[db.items]);
     const addItemToDb = async (event,item) =>{
         event.preventDefault();
         await db.items.add(item);
