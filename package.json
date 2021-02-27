@@ -13,6 +13,8 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
+    "dexie": "^3.0.3",
+    "dexie-react-hooks": "^1.0.6",
     "framer-motion": "^3.5.2",
     "node-sass": "^4.14.1",
     "react": "^16.14.0",
