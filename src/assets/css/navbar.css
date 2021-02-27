@@ -52,7 +52,7 @@ nav{
       width: 300px;
     }
   }
-  @media screen and (max-width:480){
+  @media screen and (max-width:550){
     .pageSearchCss{
       width: 200px;
     }
