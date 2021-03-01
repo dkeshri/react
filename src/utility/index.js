@@ -43,16 +43,19 @@ export const getCookie = (key) => {
 export const Year = (new Date()).getFullYear();
 export class Database {
     constructor(databaseName,tableName) {
-        this.db = new Dexie(databaseName);
+        this.dbname = databaseName;
+        this.db = new Dexie(databaseName,tableName);
         this.tableName = tableName;
     }
-    createDatabaseSchema = (Colunms) => {
-        let obj = new Object();
-        obj[this.tableName] = Colunms;
-        this.db.version(1).stores(obj);
+    createDatabaseSchema = (store) => {
+        this.db.version(1).stores(store);
+    }
+    openDatabase = ()=>{
+        return this.db.open(this.dbname,1);
     }
     addRecord = (item)=>{
         let promise = new Promise((resolve,reject)=>{
+
             this.db[this.tableName].add(item)
             .then(res=>{
                 resolve(res);

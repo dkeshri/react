@@ -5,7 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Select from 'react-select';
 import { Button } from '@material-ui/core';
 import {setCookie,getCookie} from '../utility'
-import Utilfunction from '../JavascriptConcept/Utilfunction'
+import Utilfunction from './Javascript/Utilfunction'
 const useStyles = makeStyles((theme) => ({
     root: {
         margin: '10px'

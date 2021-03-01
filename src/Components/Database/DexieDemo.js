@@ -2,8 +2,9 @@ import React, { useEffect } from 'react'
 import PageContaier from '../Common/PageContainer'
 import style from '../../assets/css/components/Database/DexieDemo.module.css'
 import {Database} from '../../utility'
-const db = new Database('deepak1','Tocket');
-db.createDatabaseSchema("++id,name,price");
+import Dexie from 'dexie'
+let db = new Database('Test','User');
+
 const DexieDemo = () => {
     const addItemToDb = async (event,item) =>{
         event.preventDefault();
