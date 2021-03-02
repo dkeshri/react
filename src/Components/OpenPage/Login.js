@@ -15,7 +15,7 @@ function Login() {
                     </div>
                     <br></br>
                     <div className={style.C_button}>
-                        <img className={style.logoSize} src={require('../../assets/svg/facebook.svg')}></img>
+                        <img src={require('../../assets/svg/facebook.svg')}></img>
                         <span>Sign in with FaceBook.</span>
                     </div>
                 </div>
