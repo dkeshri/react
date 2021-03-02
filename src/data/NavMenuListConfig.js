@@ -24,7 +24,7 @@ const config = {
             name: 'Javascript Concepts',
             children: [{
                 name: 'Array Destructuring',
-                path: '/Test',
+                path: '/Test1',
                 children: []
             }]
         },
@@ -32,7 +32,7 @@ const config = {
             name: 'CSS',
             children: [{
                 name: 'Gradient',
-                path: '/Test',
+                path: '/Test2',
                 children: []
             }]
         },
@@ -53,6 +53,14 @@ const config = {
                 children: []
             }]
 
+        },
+        {
+            name: 'Pages',
+            children: [{
+                name: 'Login',
+                path: '/Login',
+                children: []
+            }]
         },
         {
             name: 'AboutUS',

@@ -1,0 +1,53 @@
+.container{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #fbfbfb; */
+    background-color:  rgb(242, 242, 250);
+}
+.box{
+    min-height: 80vh;
+    min-width: 450px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    flex: .05;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: lavender;
+    border-radius: 5px;
+}
+.Auth_Btn{
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    
+}
+.C_button{
+    width: 100%;
+    height: 40px;
+    transition: all .3s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: -7px -7px 12px rgba(255,255,255,1),
+    7px 7px 12px var(--primaryColor);
+    cursor: pointer;
+    padding: 0 20px;
+  }
+  .C_button:hover{
+    box-shadow: inset -7px -7px 12px rgba(255,255,255,1),
+    inset 7px 7px 12px var(--primaryColor) ;
+  }
