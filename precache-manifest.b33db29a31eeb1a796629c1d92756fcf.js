@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "90775cb49b838327bbe245d29631f551",
+    "revision": "2e6fa5215791bcfb059449d858d6c354",
     "url": "/React/index.html"
   },
   {
-    "revision": "6884b940e775a705ea8d",
-    "url": "/React/static/css/main.e21dac5e.chunk.css"
+    "revision": "ec07e80a3a2a34d2fed7",
+    "url": "/React/static/css/main.377ca32e.chunk.css"
   },
   {
-    "revision": "4c1b10654b4dc6d52b46",
-    "url": "/React/static/js/2.89ef70dd.chunk.js"
+    "revision": "875d64705d0cb2b20ec6",
+    "url": "/React/static/js/2.79ce35fc.chunk.js"
   },
   {
     "revision": "76d6bc6c51809ac86151bb2c29736d55",
-    "url": "/React/static/js/2.89ef70dd.chunk.js.LICENSE.txt"
+    "url": "/React/static/js/2.79ce35fc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6884b940e775a705ea8d",
-    "url": "/React/static/js/main.8a08d8a4.chunk.js"
+    "revision": "ec07e80a3a2a34d2fed7",
+    "url": "/React/static/js/main.34ac8942.chunk.js"
   },
   {
     "revision": "7805b880e1d921ab3afb",
     "url": "/React/static/js/runtime-main.51628f6c.js"
+  },
+  {
+    "revision": "1e80416aa91f53526b9135b7fbcb8474",
+    "url": "/React/static/media/facebook.1e80416a.svg"
   },
   {
     "revision": "674f50d287a8c48dc19ba404d20fe713",
@@ -42,5 +46,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "fee66e712a8a08eef5805a46892932ad",
     "url": "/React/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  {
+    "revision": "81ad048ed858673aaca6cc2227076b8a",
+    "url": "/React/static/media/google.81ad048e.svg"
   }
 ]);
