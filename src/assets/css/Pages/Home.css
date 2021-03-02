@@ -3,7 +3,6 @@
     min-height: calc(100vh - 3rem);
     width: 100%;
     display: flex;
-    background-color: rgb(228, 139, 139);
     align-items: center;
     justify-content: center;
 }
