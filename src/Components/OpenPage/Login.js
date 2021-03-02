@@ -10,12 +10,12 @@ function Login() {
                 </div>
                 <div className={style.Auth_Btn}>
                     <div className={`${style.C_button}`}>
-                        <span>deee[</span>
+                        <img src={require('../../assets/svg/google.svg')}></img>
                         <span>Sign in with Google.</span>
                     </div>
                     <br></br>
                     <div className={style.C_button}>
-
+                        <img className={style.logoSize} src={require('../../assets/svg/facebook.svg')}></img>
                         <span>Sign in with FaceBook.</span>
                     </div>
                 </div>
