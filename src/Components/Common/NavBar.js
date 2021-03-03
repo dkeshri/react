@@ -37,7 +37,7 @@ export const NavBar = React.memo(() => {
         <>
             <nav>
                 <div className="logo-container">
-                    <div onClick={toggleDrawer(true)}>
+                    <div className="nav-logo" onClick={toggleDrawer(true)}>
                         <Logo/>
                     </div>
                     <div className="hamburger" onClick={toggleDrawer(true)}>

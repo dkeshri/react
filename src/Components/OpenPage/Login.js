@@ -1,7 +1,25 @@
 import React from 'react'
 import style from '../../assets/css/OpenPages/Login.module.css'
 import Logo from '../Common/Logo'
+import {useGoogleLogin} from 'react-google-login'
+import {AppConfig} from '../../data/AppConfig.js'
 function Login() {
+    const onGoogleSuccess = (res) =>{
+        console.log(res);
+
+    }
+    const onGoogleFailure = (res)=>{
+        console.log(res)
+    }
+    const {signIn} = useGoogleLogin({
+        onSuccess: onGoogleSuccess,
+        onFailure: onGoogleFailure,
+        clientId:AppConfig.loginVendor.google.clientId,
+        isSignedIn:true,
+        accessType:'offline'
+
+
+    });
     return (
         <div className={style.container}>
             <div className={`box ${style.box}`}>
@@ -9,7 +27,7 @@ function Login() {
                     <Logo />
                 </div>
                 <div className={style.Auth_Btn}>
-                    <div className={`${style.C_button}`}>
+                    <div className={`${style.C_button}`} onClick={signIn}>
                         <img src={require('../../assets/svg/google.svg')}></img>
                         <span>Sign in with Google.</span>
                     </div>

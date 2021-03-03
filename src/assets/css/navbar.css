@@ -53,6 +53,9 @@ nav{
     nav{
       transition: all .3s ease-in-out;
     }
+    .nav-logo{
+      display: none;
+    }
     .hamburger{
       display: block;
     }
