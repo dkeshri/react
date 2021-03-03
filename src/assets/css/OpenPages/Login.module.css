@@ -65,6 +65,12 @@
      width: 100%;
  }
  .input{
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   justify-content: space-between;
+   align-items: flex-end;
+   padding: 0 40px;
  }
  .social_media {
     min-height: 3rem;  

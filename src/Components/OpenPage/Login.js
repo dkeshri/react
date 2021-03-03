@@ -1,21 +1,37 @@
 import React from 'react'
 import style from '../../assets/css/OpenPages/Login.module.css'
 import Logo from '../Common/Logo'
-import { useGoogleLogin } from 'react-google-login'
-import { AppConfig } from '../../data/AppConfig.js'
-import { makeStyles } from '@material-ui/core/styles';
+import { useGoogleLogin } from 'react-google-login';
+import { AppConfig } from '../../data/AppConfig.js';
 import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
+import Visibility from '@material-ui/icons/Visibility';
+import VisibilityOff from '@material-ui/icons/VisibilityOff';
+import IconButton from '@material-ui/core/IconButton';
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
+import InputAdornment from '@material-ui/core/InputAdornment';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import Keyboard from '@material-ui/icons/Keyboard';
 import { Year } from '../../utility'
-const useStyles = makeStyles((theme) => ({
-    margin: {
-        margin: theme.spacing(1),
-
-    },
-}));
 function Login() {
-    const classes = useStyles();
+    const [values, setValues] = React.useState({
+        amount: '',
+        password: '',
+        weight: '',
+        weightRange: '',
+        showPassword: false,
+      });
+      const handleChange = (prop) => (event) => {
+        setValues({ ...values, [prop]: event.target.value });
+      };
+    
+      const handleClickShowPassword = () => {
+        setValues({ ...values, showPassword: !values.showPassword });
+      };
+    
+      const handleMouseDownPassword = (event) => {
+        event.preventDefault();
+      };
     const onGoogleSuccess = (res) => {
         console.log(res);
 
@@ -40,26 +56,14 @@ function Login() {
                 </div>
                 <div className={style.LoginForm}>
                     <div className={style.input}>
-                        <Grid container spacing={5} alignItems="flex-end">
-                            <Grid item>
-                                <AccountCircle />
-                            </Grid>
-                            <Grid item>
-                                <TextField id="input-with-icon-grid" label="Username" />
-                            </Grid>
-                        </Grid>
+                        <AccountCircle />
+                        <TextField fullWidth id="input-with-icon-grid" label="Username" />
                     </div>
-                    <div className={classes.margin}>
-                        <Grid container spacing={5} alignItems="flex-end">
-                            <Grid item>
-                                <AccountCircle />
-                            </Grid>
-                            <Grid item>
-                                <TextField id="input-with-icon-grid" label="Password" />
-                            </Grid>
-                        </Grid>
+                    <div className={style.input}>
+                        <Keyboard />
+                        <TextField fullWidth type="password" id="input-with-icon-grid" label="Password" />
                     </div>
-                    <br />
+                    <br /><br/>
                     <div className={`${style.C_button} ${style.C_Login_btn_Dim}`}>
                         <span>Login</span>
                     </div>
