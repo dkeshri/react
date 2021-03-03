@@ -7,12 +7,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import { Year } from '../../utility'
 const useStyles = makeStyles((theme) => ({
     margin: {
-      margin: theme.spacing(1),
+        margin: theme.spacing(1),
 
     },
-  }));
+}));
 function Login() {
     const classes = useStyles();
     const onGoogleSuccess = (res) => {
@@ -58,7 +59,7 @@ function Login() {
                             </Grid>
                         </Grid>
                     </div>
-                    <br/>
+                    <br />
                     <div className={`${style.C_button} ${style.C_Login_btn_Dim}`}>
                         <span>Login</span>
                     </div>
@@ -75,6 +76,12 @@ function Login() {
                         <span>Sign in with FaceBook</span>
                     </div>
                 </div>
+                <section className={style.social_media}>
+                    {/* <div>dkeshridev@gmail.com</div> */}
+                    <div>Copyright © <a href='https://github.com/dkeshri'
+                        target='_blank'
+                        aria-label='GitHub'>TechWorld</a> {Year}.</div>
+                </section>
             </div>
         </div>
     )
