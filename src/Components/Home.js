@@ -10,10 +10,8 @@ function Home() {
         <div className="Home-container">
             <GoogleLogin
                 clientId={AppConfig.loginVendor.google.clientId}
-                buttonText="Login"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
-                cookiePolicy={'single_host_origin'}
             />
         </div>
     )
