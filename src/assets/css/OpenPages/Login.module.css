@@ -50,8 +50,8 @@
     height: 44px;
   }
   .C_Login_btn_Dim{
-    padding: 0 80px;
-    height: 44px;
+    padding: 0 70px;
+    height: 40px;
   }
   .C_button:hover{
     box-shadow: inset -2px -2px 6px rgba(255,255,255,1),

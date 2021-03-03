@@ -39,7 +39,7 @@ function Login() {
                 </div>
                 <div className={style.LoginForm}>
                     <div className={style.input}>
-                        <Grid container spacing={1} alignItems="flex-end">
+                        <Grid container spacing={5} alignItems="flex-end">
                             <Grid item>
                                 <AccountCircle />
                             </Grid>
@@ -49,7 +49,7 @@ function Login() {
                         </Grid>
                     </div>
                     <div className={classes.margin}>
-                        <Grid container spacing={1} alignItems="flex-end">
+                        <Grid container spacing={5} alignItems="flex-end">
                             <Grid item>
                                 <AccountCircle />
                             </Grid>
