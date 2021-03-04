@@ -69,6 +69,7 @@
   .Login_button:hover{
     box-shadow: inset -2px -2px 6px #9e9efa,
     inset 2px 2px 6px #252542 ;
+
   }
  .LoginForm{
      display: flex;
@@ -94,4 +95,9 @@
     width: 100%;
     font-weight: 300;
     color: grey;
+  }
+  @media screen and (max-width:550){
+    .box{
+      min-width: 300px;
+    }
   }
