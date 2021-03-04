@@ -56,15 +56,15 @@ function Login() {
                 </div>
                 <div className={style.LoginForm}>
                     <div className={style.input}>
-                        <AccountCircle />
+                        <AccountCircle style={{color:'#3f3f72',height:'40px',width:'40px',marginRight:'20px'}} />
                         <TextField fullWidth id="input-with-icon-grid" label="Username" />
                     </div>
                     <div className={style.input}>
-                        <Keyboard />
+                        <Keyboard style={{color:'#3f3f72',height:'40px',width:'40px',marginRight:'20px'}} />
                         <TextField fullWidth type="password" id="input-with-icon-grid" label="Password" />
                     </div>
                     <br /><br/>
-                    <div className={`${style.C_button} ${style.C_Login_btn_Dim}`}>
+                    <div className={`${style.Login_button}`}>
                         <span>Login</span>
                     </div>
                 </div>

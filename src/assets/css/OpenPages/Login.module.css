@@ -43,18 +43,32 @@
     2px 2px 6px var(--primaryColor);
     cursor: pointer;
   }
+  .C_button:hover{
+    box-shadow: inset -2px -2px 6px rgba(255,255,255,1),
+    inset 2px 2px 6px var(--primaryColor) ;
+  }
   .C_btn_Dim{
     width: 100%;
     height: 40px;
     
   }
-  .C_Login_btn_Dim{
+  .Login_button{
+    transition: all .3s ease-in;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: -2px -2px 6px rgba(255,255,255,1),
+    2px 2px 6px #3f3f72;
+    cursor: pointer;
     padding: 0 70px;
     height: 36px;
+    background-color: #3f3f72;
+    color: white;
   }
-  .C_button:hover{
-    box-shadow: inset -2px -2px 6px rgba(255,255,255,1),
-    inset 2px 2px 6px var(--primaryColor) ;
+  .Login_button:hover{
+    box-shadow: inset -2px -2px 6px #9e9efa,
+    inset 2px 2px 6px #252542 ;
   }
  .LoginForm{
      display: flex;
