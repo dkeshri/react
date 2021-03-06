@@ -1,5 +1,5 @@
 nav{
-    background-color: var(--primaryColor);
+    background-color: white;
     height: var(--navBarHeight);
     display: flex;
     justify-content: space-between;
@@ -9,7 +9,7 @@ nav{
     z-index: 1000;
     position: sticky;
     top:0;
-    box-shadow: 3px 0px 25px var(--bannerTextSecondaryColor);
+    box-shadow: 0px 0px 10px #b3bbce;
 }
 .hamburger{
     cursor: pointer;

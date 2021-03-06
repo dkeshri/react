@@ -9,11 +9,13 @@ import { AnimatePresence } from 'framer-motion'
 import FormicForm from './Components/Forms/Formic'
 import CustomHooksDemo from './Components/Dropdown'
 import DexieDemo from './Components/Database/DexieDemo'
+import { BrowserRouter as Router} from 'react-router-dom'
 export const AppRouter = () => {
-    const location = useLocation();
+    
     return (
         <AnimatePresence exitBeforeEnter>
-            <Switch location={location} key={location.key}>
+            <Router basename="/React">
+            <Switch>
                 <Route path="/Login" exact component={Login} />
                 <ProtectedRoute path="/" exact component={Home} />
                 <ProtectedRoute path="/Home" exact component={Home} />
@@ -24,6 +26,7 @@ export const AppRouter = () => {
                
                 <Route path="*" exact component={PageNotFound} />
             </Switch>
+            </Router>
         </AnimatePresence>
     )
 }

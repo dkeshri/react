@@ -7,7 +7,7 @@
     background-color:  rgb(242, 242, 250);
 }
 .box{
-    min-height: 80vh;
+    min-height: 580px;
     min-width: 400px;
     background-color: white;
     display: flex;

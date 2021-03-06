@@ -4,16 +4,12 @@ import Logo from '../Common/Logo'
 import { useGoogleLogin } from 'react-google-login';
 import { AppConfig } from '../../data/AppConfig.js';
 import TextField from '@material-ui/core/TextField';
-import Visibility from '@material-ui/icons/Visibility';
-import VisibilityOff from '@material-ui/icons/VisibilityOff';
-import IconButton from '@material-ui/core/IconButton';
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
-import InputAdornment from '@material-ui/core/InputAdornment';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Keyboard from '@material-ui/icons/Keyboard';
 import { Year } from '../../utility'
+import { useHistory } from 'react-router-dom'
 function Login() {
+    const history = useHistory();
     const [values, setValues] = React.useState({
         amount: '',
         password: '',
@@ -48,6 +44,9 @@ function Login() {
 
 
     });
+    const onLoginBtnClick = () =>{
+       history.replace('/')
+    }
     return (
         <div className={style.container}>
             <div className={`box ${style.box}`}>
@@ -64,7 +63,7 @@ function Login() {
                         <TextField fullWidth type="password" id="input-with-icon-grid" label="Password" />
                     </div>
                     <br /><br/>
-                    <div className={`${style.Login_button}`}>
+                    <div className={`${style.Login_button}`} onClick={onLoginBtnClick}>
                         <span>Login</span>
                     </div>
                 </div>
