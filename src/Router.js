@@ -11,22 +11,19 @@ import CustomHooksDemo from './Components/Dropdown'
 import DexieDemo from './Components/Database/DexieDemo'
 import { BrowserRouter as Router} from 'react-router-dom'
 export const AppRouter = () => {
-    
+    const location = useLocation();
     return (
         <AnimatePresence exitBeforeEnter>
-            <Router basename="/React">
-            <Switch>
-                <Route path="/Login" exact component={Login} />
+            <Switch location={location} key={location.key}>
                 <ProtectedRoute path="/" exact component={Home} />
                 <ProtectedRoute path="/Home" exact component={Home} />
                 <ProtectedRoute path="/Test" exact component={Test} />
                 <ProtectedRoute path="/Components/Forms/Formic" exact component={FormicForm} />
                 <ProtectedRoute path="/CustomHooksDemo" exact component={CustomHooksDemo} />
                 <ProtectedRoute path="/Database/Dexie" exact component={DexieDemo} />
-               
+                <ProtectedRoute path="/Login" exact component={Login} openPage />
                 <Route path="*" exact component={PageNotFound} />
             </Switch>
-            </Router>
         </AnimatePresence>
     )
 }

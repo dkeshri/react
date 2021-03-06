@@ -8,6 +8,20 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import Keyboard from '@material-ui/icons/Keyboard';
 import { Year } from '../../utility'
 import { useHistory } from 'react-router-dom'
+import { motion } from 'framer-motion'
+const mainContentSectionVariants = {
+    init: {
+        opacity: 0
+    },
+    in: {
+        opacity: 1,
+        transition: { duration: .5, }
+    },
+    exit: {
+        x: '-100vw',
+        transition: { duration: .5, ease: 'easeInOut' }
+    }
+}
 function Login() {
     const history = useHistory();
     const [values, setValues] = React.useState({
@@ -48,7 +62,7 @@ function Login() {
        history.replace('/')
     }
     return (
-        <div className={style.container}>
+        <motion.div className={style.container}>
             <div className={`box ${style.box}`}>
                 <div className={style.logo}>
                     <Logo />
@@ -86,7 +100,7 @@ function Login() {
                         aria-label='GitHub'>TechWorld</a> {Year}.</div>
                 </section>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

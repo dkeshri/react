@@ -1,27 +1,39 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect, useHistory } from 'react-router-dom'
 import { NavBar } from './Components/Common/NavBar'
 import { motion } from 'framer-motion'
 import Footer from './Components/Common/Footer'
+import Login from './Components/OpenPage/Login'
 const mainContentSectionVariants = {
     init: {
         opacity: 0
     },
     in: {
         opacity: 1,
-        transition: { duration: .5 ,}
+        transition: { duration: .5, }
     },
     exit: {
         x: '-100vw',
-        transition: {duration:.5, ease: 'easeInOut' }
+        transition: { duration: .5, ease: 'easeInOut' }
     }
 }
 export const ProtectedRoute = (props) => {
     const Component = props.component;
+    const isOpenPage = props.openPage;
+    console.log(isOpenPage);
     const isAuthenticated = true;
-
-    return isAuthenticated ? (<>
-        <div id="main">
+    const history = useHistory()
+    return isOpenPage ? (<>
+        <motion.div className="mainContentSection"
+            variants={mainContentSectionVariants}
+            initial="init"
+            animate="in"
+            exit="exit">
+            <Component />
+        </motion.div>
+    </>
+    ) : (
+        isAuthenticated ? (<div id="main">
             <NavBar />
             <motion.div className="mainContentSection"
                 variants={mainContentSectionVariants}
@@ -30,12 +42,18 @@ export const ProtectedRoute = (props) => {
                 exit="exit">
                 <Component />
             </motion.div>
-            <div style={{color:"white"}} className="footer">
-                <Footer/>
+            <div style={{ color: "white" }} className="footer">
+                <Footer />
             </div>
-        </div>
-    </>
-    ) : (
-            <Redirect to={{ pathname: '/login' }} />
-        );
+        </div>) : (
+            <motion.div className="mainContentSection"
+                variants={mainContentSectionVariants}
+                initial="init"
+                animate="in"
+                exit="exit">
+                <Login />
+            </motion.div>
+        )
+
+    );
 }
