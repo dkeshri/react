@@ -60,6 +60,20 @@ nav{
       display: block;
     }
     .pageSearchCss{
-      width: 270px;
+      width: 300px;
+    }
+  }
+  @media screen and (max-width:400px){
+    nav{
+      transition: all .3s ease-in-out;
+    }
+    .nav-logo{
+      display: none;
+    }
+    .hamburger{
+      display: block;
+    }
+    .pageSearchCss{
+      width: 250px;
     }
   }
