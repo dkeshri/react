@@ -18,7 +18,7 @@ nav{
   .line{
     width: 2rem;
     height: 4px;
-    background-color: white;
+    background-color: var(--LogoBorderColor);
     margin: .25rem 0;
     border-radius: 3px;
   }
@@ -60,11 +60,6 @@ nav{
       display: block;
     }
     .pageSearchCss{
-      width: 300px;
-    }
-  }
-  @media screen and (max-width:550){
-    .pageSearchCss{
-      width: 200px;
+      width: 270px;
     }
   }

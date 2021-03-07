@@ -9,8 +9,8 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    border-left: 10px solid #3f3f72;
-    border-right: 10px solid #3f3f72;
+    border-left: 10px solid var(--LogoBorderColor);
+    border-right: 10px solid var(--LogoBorderColor);
 }
 .h1{
     font-family: serif;
