@@ -22,7 +22,8 @@ const User = () => {
                 {UserList.map((user,index)=>{
                     if(index==9) // i want only 9 records out of 10 for better looks UI. 
                     return;// therefore not created 10th UserCard, and returned empty only
-                   return <UserCard key={index} user={user}/>}
+                   return <UserCard key={index} user={user}/>
+                }
                 )}
             </div>
 

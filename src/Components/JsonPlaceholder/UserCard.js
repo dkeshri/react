@@ -1,14 +1,19 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router'
 import style from '../../assets/css/Jsonplaceholder/UserCard.module.css'
-
-const UserCard = ({user}) => {
-    const [userId,setUsetId] = useState(user.id);
+import { motion } from 'framer-motion'
+const UserCard = ({ user }) => {
+    const [userId, setUsetId] = useState(user.id);
     const history = useHistory();
     return (
-        <div className={style.box} onClick={()=>{
-            history.push(`/Api/JsonPlaceHolder/UserDetail/${userId}`);
-        }}>
+        <motion.div
+            whileHover={{
+                scale: 1.05
+            }}
+            className={style.box}
+            onClick={() => {
+                history.push(`/Api/JsonPlaceHolder/UserDetail/${userId}`);
+            }}>
             <div className={style.company}>
                 <h3>{user.company.name}</h3>
             </div>
@@ -26,7 +31,7 @@ const UserCard = ({user}) => {
                     <span>{user.email}</span>
                 </div>
             </div>
-            <div className={style.line}/>
+            <div className={style.line} />
             <div className={style.contact}>
                 <div className={style.row}>
                     <h6>Address :</h6>
@@ -45,7 +50,7 @@ const UserCard = ({user}) => {
             <div className={style.website}>
                 <a href="#">{user.website} </a>
             </div>
-        </div>
+        </motion.div>
     )
 }
 export default UserCard
