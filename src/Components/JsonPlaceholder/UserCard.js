@@ -7,7 +7,7 @@ const UserCard = ({user}) => {
     const history = useHistory();
     return (
         <div className={style.box} onClick={()=>{
-            history.push('/Api/JsonPlaceHolder/UserDetail');
+            history.push(`/Api/JsonPlaceHolder/UserDetail/${userId}`);
         }}>
             <div className={style.company}>
                 <h3>{user.company.name}</h3>

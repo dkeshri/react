@@ -24,7 +24,7 @@ export const AppRouter = () => {
                 <ProtectedRoute path="/CustomHooksDemo" exact component={CustomHooksDemo} />
                 <ProtectedRoute path="/Database/Dexie" exact component={DexieDemo} />
                 <ProtectedRoute path="/Api/JsonPlaceHolder/Users" exact component={User} />
-                <ProtectedRoute path="/Api/JsonPlaceHolder/UserDetail" exact component={UserDetail} />
+                <ProtectedRoute path="/Api/JsonPlaceHolder/UserDetail/:id" exact component={UserDetail} />
 
                 <ProtectedRoute path="/Login" exact component={Login} openPage />
                 <Route path="*" exact component={PageNotFound} />
