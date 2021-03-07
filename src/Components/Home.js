@@ -4,7 +4,7 @@ import GoogleLogin from 'react-google-login'
 import {AppConfig} from '../data/AppConfig.js'
 function Home() {
     const responseGoogle = (res)=>{
-        console.log(res);
+        
     }
     return (
         <div className="Home-container">
