@@ -32,7 +32,7 @@ const UserCard = () => {
                     </div>
                 </div>
                 <div className={style.row}>
-                    <h6>Ph. Nunber :</h6>
+                    <h6>Ph. Number :</h6>
                     <span>(254)954-1289</span>
                 </div>
             </div>
