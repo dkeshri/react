@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/React/static/css/main.cc4c9472.chunk.css",
+    "main.css": "/React/static/css/main.ace55430.chunk.css",
     "main.js": "/React/static/js/main.ff2f5d4d.chunk.js",
     "main.js.map": "/React/static/js/main.ff2f5d4d.chunk.js.map",
     "runtime-main.js": "/React/static/js/runtime-main.51628f6c.js",
@@ -8,9 +8,9 @@
     "static/js/2.be709e51.chunk.js": "/React/static/js/2.be709e51.chunk.js",
     "static/js/2.be709e51.chunk.js.map": "/React/static/js/2.be709e51.chunk.js.map",
     "index.html": "/React/index.html",
-    "precache-manifest.bc0f97435dfd85e6eb4bbbd187f5e66d.js": "/React/precache-manifest.bc0f97435dfd85e6eb4bbbd187f5e66d.js",
+    "precache-manifest.f649e985050ca8d4eb54b43340c67f2b.js": "/React/precache-manifest.f649e985050ca8d4eb54b43340c67f2b.js",
     "service-worker.js": "/React/service-worker.js",
-    "static/css/main.cc4c9472.chunk.css.map": "/React/static/css/main.cc4c9472.chunk.css.map",
+    "static/css/main.ace55430.chunk.css.map": "/React/static/css/main.ace55430.chunk.css.map",
     "static/js/2.be709e51.chunk.js.LICENSE.txt": "/React/static/js/2.be709e51.chunk.js.LICENSE.txt",
     "static/media/facebook.svg": "/React/static/media/facebook.8918961d.svg",
     "static/media/font-awesome.css": "/React/static/media/fontawesome-webfont.fee66e71.woff",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.51628f6c.js",
     "static/js/2.be709e51.chunk.js",
-    "static/css/main.cc4c9472.chunk.css",
+    "static/css/main.ace55430.chunk.css",
     "static/js/main.ff2f5d4d.chunk.js"
   ]
 }
