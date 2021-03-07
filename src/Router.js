@@ -10,6 +10,7 @@ import FormicForm from './Components/Forms/Formic'
 import CustomHooksDemo from './Components/Dropdown'
 import DexieDemo from './Components/Database/DexieDemo'
 import { BrowserRouter as Router} from 'react-router-dom'
+import User from './Components/JsonPlaceholder/User'
 export const AppRouter = () => {
     const location = useLocation();
     return (
@@ -21,6 +22,7 @@ export const AppRouter = () => {
                 <ProtectedRoute path="/Components/Forms/Formic" exact component={FormicForm} />
                 <ProtectedRoute path="/CustomHooksDemo" exact component={CustomHooksDemo} />
                 <ProtectedRoute path="/Database/Dexie" exact component={DexieDemo} />
+                <ProtectedRoute path="/Api/JsonPlaceHolder/Users" exact component={User} />
                 <ProtectedRoute path="/Login" exact component={Login} openPage />
                 <Route path="*" exact component={PageNotFound} />
             </Switch>

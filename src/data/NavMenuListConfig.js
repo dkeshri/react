@@ -63,6 +63,16 @@ const config = {
             }]
         },
         {
+            name: 'Api',
+            children: [{
+                name: 'JsonPlaceHolder',
+                children: [{
+                    name:'JsonPlaceHolder User',
+                    path:'/Api/JsonPlaceHolder/Users'
+                }]
+            }]
+        },
+        {
             name: 'AboutUS',
             children: [{
                 name: 'About',

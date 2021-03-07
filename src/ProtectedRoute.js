@@ -4,6 +4,7 @@ import { NavBar } from './Components/Common/NavBar'
 import { motion } from 'framer-motion'
 import Footer from './Components/Common/Footer'
 import Login from './Components/OpenPage/Login'
+import {AppConfig} from './data/AppConfig.js'
 const mainContentSectionVariants = {
     init: {
         opacity: 0
@@ -20,8 +21,8 @@ const mainContentSectionVariants = {
 export const ProtectedRoute = (props) => {
     const Component = props.component;
     const isOpenPage = props.openPage;
-    console.log(isOpenPage);
-    const isAuthenticated = true;
+    console.log(AppConfig.isAuth)
+    const isAuthenticated = AppConfig.isAuth;
     const history = useHistory()
     return isOpenPage ? (<>
         <motion.div className="mainContentSection"
