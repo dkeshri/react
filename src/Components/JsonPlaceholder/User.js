@@ -11,11 +11,7 @@ const User = () => {
     }, []);
     useEffect(() => {
         if (userdata.fetchedData != null) {
-            let UserOptions = userdata.fetchedData.map((item, index) => {
-                return { value: item.id, label: item.name }
-            });
-            setUserList(UserOptions);
-            console.log(userdata.fetchedData)
+            setUserList(userdata.fetchedData);
         }
     }, [userdata.fetchedData]);
     return (
@@ -23,12 +19,11 @@ const User = () => {
             headerTitle="Api Demo"
             title="Users">
             <div className={`box ${style.box}`}>
-                <UserCard></UserCard>
-                <UserCard></UserCard>
-                <UserCard></UserCard>
-                <UserCard></UserCard>
-                <UserCard></UserCard>
-                <UserCard></UserCard>
+                {UserList.map((user,index)=>{
+                    if(index==9) // i want only 9 records out of 10 for better looks UI. 
+                    return;// therefore not created 10th UserCard, and returned empty only
+                   return <UserCard key={index} user={user}/>}
+                )}
             </div>
 
         </PageContainer>

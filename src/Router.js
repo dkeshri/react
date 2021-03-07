@@ -11,6 +11,7 @@ import CustomHooksDemo from './Components/Dropdown'
 import DexieDemo from './Components/Database/DexieDemo'
 import { BrowserRouter as Router} from 'react-router-dom'
 import User from './Components/JsonPlaceholder/User'
+import UserDetail from './Components/JsonPlaceholder/UserDetail'
 export const AppRouter = () => {
     const location = useLocation();
     return (
@@ -23,6 +24,8 @@ export const AppRouter = () => {
                 <ProtectedRoute path="/CustomHooksDemo" exact component={CustomHooksDemo} />
                 <ProtectedRoute path="/Database/Dexie" exact component={DexieDemo} />
                 <ProtectedRoute path="/Api/JsonPlaceHolder/Users" exact component={User} />
+                <ProtectedRoute path="/Api/JsonPlaceHolder/UserDetail" exact component={UserDetail} />
+
                 <ProtectedRoute path="/Login" exact component={Login} openPage />
                 <Route path="*" exact component={PageNotFound} />
             </Switch>

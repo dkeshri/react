@@ -1,23 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useHistory } from 'react-router'
 import style from '../../assets/css/Jsonplaceholder/UserCard.module.css'
-const UserCard = () => {
+
+const UserCard = ({user}) => {
+    const [userId,setUsetId] = useState(user.id);
+    const history = useHistory();
     return (
-        <div className={style.box}>
+        <div className={style.box} onClick={()=>{
+            history.push('/Api/JsonPlaceHolder/UserDetail');
+        }}>
             <div className={style.company}>
-                <h3>Company_name</h3>
+                <h3>{user.company.name}</h3>
             </div>
             <div className={style.profile}>
                 <div className={style.row}>
                     <h6>Name :</h6>
-                    <span>Deepak keshri</span>
+                    <span>{user.name}</span>
                 </div>
                 <div className={style.row}>
                     <h6>Username :</h6>
-                    <span>dkeshri</span>
+                    <span>{user.username}</span>
                 </div>
                 <div className={style.row}>
                     <h6>EmailID :</h6>
-                    <span>dkeshidev@gmail.com</span>
+                    <span>{user.email}</span>
                 </div>
             </div>
             <div className={style.line}/>
@@ -25,19 +31,19 @@ const UserCard = () => {
                 <div className={style.row}>
                     <h6>Address :</h6>
                     <div className={style.address}>
-                        <span>Nangla charan das</span>
-                        <span>Suite 351</span>
-                        <span>Roscoeview</span>
-                        <span>201306</span>
+                        <span>{user.address.street}</span>
+                        <span>{user.address.suite}</span>
+                        <span>{user.address.city}</span>
+                        <span>{user.address.zipcode}</span>
                     </div>
                 </div>
                 <div className={style.row}>
                     <h6>Ph. Number :</h6>
-                    <span>(254)954-1289</span>
+                    <span>{user.phone}</span>
                 </div>
             </div>
             <div className={style.website}>
-                <a href="#">google.com </a>
+                <a href="#">{user.website} </a>
             </div>
         </div>
     )
