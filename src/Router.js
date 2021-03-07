@@ -25,9 +25,8 @@ export const AppRouter = () => {
                 <ProtectedRoute path="/Database/Dexie" exact component={DexieDemo} />
                 <ProtectedRoute path="/Api/JsonPlaceHolder/Users" exact component={User} />
                 <ProtectedRoute path="/Api/JsonPlaceHolder/UserDetail/:id" exact component={UserDetail} />
-
                 <ProtectedRoute path="/Login" exact component={Login} openPage />
-                <Route path="*" exact component={PageNotFound} />
+                <ProtectedRoute path="*" exact component={PageNotFound} openPage />
             </Switch>
         </AnimatePresence>
     )
