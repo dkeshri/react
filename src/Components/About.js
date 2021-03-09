@@ -68,7 +68,7 @@ const About = () => {
                                 <h5>Portfolio :</h5>
                             </div>
                             <div className={style.col_right}>
-                                <a href="https://dkeshri.github.io/Portfolio/">https://dkeshri.github.io/Portfolio/</a>
+                                <a target="_blank" href="https://dkeshri.github.io/Portfolio/">https://dkeshri.github.io/Portfolio/</a>
                             </div>
                         </div>
                         
@@ -83,7 +83,7 @@ const About = () => {
             <div className={style.line_black}></div>
             <div className={style.line_black}></div>
             <div className={` ${style.Contact_container}`}>
-                
+
             </div>
         </>
 
