@@ -1,0 +1,74 @@
+.box{
+    min-height: 80vh;
+    background-color: #e4d4c4;
+    display: flex;
+
+}
+.photo{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.img{
+    height: 90%;
+    width: 70%;
+    object-fit: contain;
+}
+.About{
+    flex:1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.header{
+    flex: .5;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 20px 0;
+}
+.title{
+    display: flex;
+    justify-content: flex-start;
+}
+.h1{
+    display: inline-block;
+    font-size: 104px;
+    font-family: 'Merienda', cursive;
+}
+.line{
+    background-color: white;
+    height: 1px;
+    margin-top: 3px;
+}
+.span{
+
+    font-family: 'Parisienne', cursive;
+    font-size: 90px;
+}
+.desc{
+    flex:1;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.desc_title{
+    font-family: 'Stalemate', cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+}
+.objective_title{
+    font-family: 'Barlow', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+.objective{
+    margin-top: 5px;
+    width: 60%;
+    text-justify: newspaper;
+    text-align: justify;
+    
+}
