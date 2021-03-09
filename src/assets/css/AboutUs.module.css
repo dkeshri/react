@@ -2,7 +2,6 @@
     min-height: 80vh;
     background-color: #e4d4c4;
     display: flex;
-
 }
 .photo{
     flex:1;
@@ -71,4 +70,65 @@
     text-justify: newspaper;
     text-align: justify;
     
+}
+.Contact_container_div{
+
+}
+.Contact_heading{
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.Contact_heading > .h1{
+    display: inline-block;
+    font-size: 50px;
+    font-family: 'Merienda', cursive;
+}
+.Contact_heading > .span{
+    font-family: 'Parisienne', cursive;
+    font-size: 45px;
+}
+.Contact_container{
+    min-height: 300px;
+    display: flex;  
+}
+.Contact{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    justify-content: center;
+}
+.Contact_Image{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+.Contact_Image>.img{
+    
+    object-fit: contain;
+}
+.row{
+    display: flex;
+}
+.col_left{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex:.5;
+    padding-right: 20px;
+}
+.col_right{
+    flex:1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.line_black{
+    background-color: rgb(170, 169, 169);
+    height: 1px;
+    margin-top: 3px;
 }
