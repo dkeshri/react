@@ -114,6 +114,10 @@
 .row{
     display: flex;
 }
+.row h5{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+}
 .col_left{
     display: flex;
     justify-content: flex-end;
