@@ -12,6 +12,7 @@ import DexieDemo from './Components/Database/DexieDemo'
 import { BrowserRouter as Router} from 'react-router-dom'
 import User from './Components/JsonPlaceholder/User'
 import UserDetail from './Components/JsonPlaceholder/UserDetail'
+import About from './Components/About'
 export const AppRouter = () => {
     const location = useLocation();
     return (
@@ -25,6 +26,8 @@ export const AppRouter = () => {
                 <ProtectedRoute path="/Database/Dexie" exact component={DexieDemo} />
                 <ProtectedRoute path="/Api/JsonPlaceHolder/Users" exact component={User} />
                 <ProtectedRoute path="/Api/JsonPlaceHolder/UserDetail/:id" exact component={UserDetail} />
+                <ProtectedRoute path="/About" exact component={About} />
+                
                 <ProtectedRoute path="/Login" exact component={Login} openPage />
                 <ProtectedRoute path="*" exact component={PageNotFound} openPage />
             </Switch>

@@ -74,11 +74,8 @@ const config = {
         },
         {
             name: 'AboutUS',
-            children: [{
-                name: 'About',
-                path: '/Test',
-                children: []
-            }]
+            path:'/About',
+            children: []
         }
     ]
 }
