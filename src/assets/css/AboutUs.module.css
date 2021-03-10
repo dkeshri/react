@@ -71,9 +71,6 @@
     text-align: justify;
     
 }
-.Contact_container_div{
-
-}
 .Contact_heading{
     min-height: 100px;
     display: flex;
@@ -136,3 +133,9 @@
     height: 1px;
     margin-top: 3px;
 }
+  .socialMedia{
+    background-color: white;
+    width: 100%;
+    margin-top: 30px;
+    height: 4rem;
+  }

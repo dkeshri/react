@@ -71,7 +71,9 @@ const About = () => {
                                 <a target="_blank" href="https://dkeshri.github.io/Portfolio/">https://dkeshri.github.io/Portfolio/</a>
                             </div>
                         </div>
-                        
+                        <section className={`social-media ${style.socialMedia}`}>
+                            <SocialMediaIcons color="grey" />
+                        </section>
                     </div>
                     <div className={style.Contact_Image}>
                         <img

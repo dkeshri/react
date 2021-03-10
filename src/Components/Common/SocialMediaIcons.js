@@ -1,9 +1,10 @@
 import React from 'react'
 import '../../assets/css/SocialMediaIcons.css'
-function SocialMediaIcons() {
+function SocialMediaIcons(props) {
     return (
         <div className='social-icons'>
             <a
+                style={{ color: props.color }}
                 className='social-icon-link instagram'
                 href='https://www.instagram.com/deepakkeshri0613/'
                 target='_blank'
@@ -12,6 +13,7 @@ function SocialMediaIcons() {
                 <i className='fa fa-instagram' />
             </a>
             <a
+                style={{ color: props.color }}
                 className='social-icon-link youtube'
                 href='https://github.com/dkeshri'
                 target='_blank'
@@ -20,6 +22,7 @@ function SocialMediaIcons() {
                 <i className='fa fa-github-square' />
             </a>
             <a
+                style={{ color: props.color }}
                 className='social-icon-link twitter'
                 href='https://twitter.com/DeepakK18204431'
                 target='_blank'
@@ -28,6 +31,7 @@ function SocialMediaIcons() {
                 <i className='fa fa-twitter' />
             </a>
             <a
+                style={{ color: props.color }}
                 className='social-icon-link twitter'
                 href='https://in.linkedin.com/in/dkeshri'
                 target='_blank'
