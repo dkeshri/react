@@ -1,6 +1,5 @@
 import React from 'react'
-import style from '../assets/css/AboutUs.module.css'
-import SocialMediaIcons from './Common/SocialMediaIcons'
+import style from '../../assets/css/About/AboutUs.module.css'
 import Contact from './Contact'
 import Skill from './Skill'
 const About = () => {
@@ -10,7 +9,7 @@ const About = () => {
                 <div className={style.photo}>
                     <img
                         className={style.img}
-                        src={require('../assets/img/profile/Deepak_pic.jpg')} />
+                        src={require('../../assets/img/profile/Deepak_pic.jpg')} />
                 </div>
                 <div className={style.About}>
                     <div className={style.header}>

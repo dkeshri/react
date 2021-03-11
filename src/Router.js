@@ -12,7 +12,7 @@ import DexieDemo from './Components/Database/DexieDemo'
 import { BrowserRouter as Router} from 'react-router-dom'
 import User from './Components/JsonPlaceholder/User'
 import UserDetail from './Components/JsonPlaceholder/UserDetail'
-import About from './Components/About'
+import About from './Components/About/About'
 export const AppRouter = () => {
     const location = useLocation();
     return (

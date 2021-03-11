@@ -27,4 +27,5 @@
     width: 100%;
     box-shadow: inset -2px -2px 4px #ededf7,
     inset 2px 2px 4px #86868d ;
+    flex-wrap: wrap;
 }

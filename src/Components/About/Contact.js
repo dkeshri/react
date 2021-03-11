@@ -1,6 +1,6 @@
 import React from 'react'
-import SocialMediaIcons from './Common/SocialMediaIcons'
-import style from '../assets/css/Contact.module.css'
+import SocialMediaIcons from '../Common/SocialMediaIcons'
+import style from '../../assets/css/About/Contact.module.css'
 const Contact = () => {
     return (
         <div className={` ${style.Contact_container}`}>
@@ -40,7 +40,7 @@ const Contact = () => {
             <div className={style.Contact_Image}>
                 <img
                     className={style.img}
-                    src={require('../assets/img/profile/Dummy.jpg')} />
+                    src={require('../../assets/img/profile/Dummy.jpg')} />
             </div>
         </div>
     )
