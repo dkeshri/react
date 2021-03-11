@@ -1,4 +1,30 @@
 .container{
-    min-height: 300px;
+    min-height: 400px;
     display: flex;
+}
+.SkillContainer{
+    flex: 1;
+    display: flex;
+    padding: 30px;
+}
+.SkillTitileContainer{
+    display: flex;
+    justify-content: center;
+    flex: .6;
+    align-items: center;
+    flex-direction: column;
+}
+.h1{
+    font-size: 50px;
+    font-family: 'Merienda', cursive;
+}
+.span{
+    font-family: 'Parisienne', cursive;
+    font-size: 45px;
+}
+.box{
+    display: flex;
+    width: 100%;
+    box-shadow: inset -2px -2px 4px #ededf7,
+    inset 2px 2px 4px #86868d ;
 }
