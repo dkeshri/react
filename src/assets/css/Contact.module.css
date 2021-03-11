@@ -1,0 +1,68 @@
+.Contact_heading{
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.Contact_heading > .h1{
+    display: inline-block;
+    font-size: 50px;
+    font-family: 'Merienda', cursive;
+}
+.Contact_heading > .span{
+    font-family: 'Parisienne', cursive;
+    font-size: 45px;
+}
+.Contact_container{
+    min-height: 300px;
+    display: flex;  
+}
+.Contact{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    justify-content: center;
+}
+.img{
+    height: 90%;
+    width: 70%;
+    object-fit: contain;
+}
+.Contact_Image{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+.Contact_Image>.img{
+    
+    object-fit: contain;
+}
+.row{
+    display: flex;
+}
+.row h5{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+}
+.col_left{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex:.5;
+    padding-right: 20px;
+}
+.col_right{
+    flex:1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.socialMedia{
+    background-color: white;
+    width: 100%;
+    margin-top: 30px;
+    height: 4rem;
+  }
