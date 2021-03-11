@@ -10,7 +10,7 @@
 .SkillTitileContainer{
     display: flex;
     justify-content: center;
-    flex: .6;
+    flex: .7;
     align-items: center;
     flex-direction: column;
 }
