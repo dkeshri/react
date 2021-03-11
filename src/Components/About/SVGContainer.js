@@ -32,6 +32,7 @@ const SVGContainer = () => {
         <div className={style.container}>
             <img className={style.img} src={require('../../assets/svg/java.svg')}></img>
         </div>
+        
     </>
     )
 }

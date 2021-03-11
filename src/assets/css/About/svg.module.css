@@ -2,8 +2,13 @@
     width: 150px;
     height: 150px;
     padding: 20px;
+    cursor: pointer;
 }
 .img{
     height: 100%;
     width: 100%;
+    display: inline-block;
+}
+.container :hover{
+    transform: translateY(-10px);
 }

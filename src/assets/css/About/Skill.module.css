@@ -1,5 +1,5 @@
 .container{
-    min-height: 400px;
+    max-height: 550px;
     display: flex;
 }
 .SkillContainer{
@@ -28,4 +28,5 @@
     box-shadow: inset -2px -2px 4px #ededf7,
     inset 2px 2px 4px #86868d ;
     flex-wrap: wrap;
+    overflow-y: auto;
 }
