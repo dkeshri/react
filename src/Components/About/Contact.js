@@ -34,6 +34,7 @@ const Contact = () => {
                     </div>
                 </div>
                 <section className={`social-media ${style.socialMedia}`}>
+                    <div></div>
                     <SocialMediaIcons color="grey" />
                 </section>
             </div>

@@ -66,3 +66,11 @@
     margin-top: 30px;
     height: 4rem;
   }
+  @media screen and (max-width: 700px) {
+    .Contact_Image{
+        display: none;
+    }
+    h5{
+        font-size: medium;
+    }
+}

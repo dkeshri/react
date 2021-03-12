@@ -2,6 +2,7 @@
     min-height: 80vh;
     background-color: #e4d4c4;
     display: flex;
+    flex-wrap: wrap;
 }
 .photo{
     flex:1;
@@ -76,3 +77,28 @@
     margin-top: 3px;
 }
 
+@media screen and (max-width: 700px) {
+    .box{
+        flex-direction: column;
+    }
+    .header{
+        justify-content: center;
+        align-items: center;
+    }
+    .desc{
+        justify-content: center;
+        align-items: center;
+    }
+    .h1{
+        font-size: 80px;
+    }
+    .span{
+        font-size: 70px;
+    }
+    .desc_title{
+        font-size: 55px;
+    }
+    .objective_title{
+        font-size: 17px;
+    }
+}

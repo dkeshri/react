@@ -12,3 +12,10 @@
 .container :hover{
     transform: translateY(-10px);
 }
+@media screen and (max-width: 430px) {
+    .container{
+        height: 130px;
+        width: 130px;
+    }
+  
+  }

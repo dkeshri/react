@@ -11,7 +11,7 @@ const Skill = () => {
             </div>
             <div className={style.SkillTitileContainer}>
                 <h3 className={style.h1}>Skills</h3>
-                <span className={style.span}>that I own</span>
+                <span className={style.span}>that I own.</span>
             </div>
         </div>
     )
