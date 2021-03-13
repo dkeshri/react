@@ -1,17 +1,15 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios';
 const staticProperty = {
-  baseUrl:`https://jsonplaceholder.typicode.com`,
+  baseUrl: `https://jsonplaceholder.typicode.com`,
   responseType: 'json',
-  headers:{
+  headers: {
     "Content-type": "application/json; charset=UTF-8"
   }
 }
 export const useHttpRequest = (argData = {}, dependencies = []) => {
-  const [isLoading, setLoading] = useState(false);
   const [fetchedData, setFetchedData] = useState(null);
   useEffect(() => {
-    setLoading(true);
     setFetchedData(null);
     axios({
       // `url` is the server URL that will be used for the request
@@ -33,13 +31,12 @@ export const useHttpRequest = (argData = {}, dependencies = []) => {
       headers: staticProperty.headers,
     })
       .then(res => {
-        setLoading(false);
         setFetchedData(res.data);
       }).catch((e) => {
         console.log(e);
       });
   }, dependencies);
-  return { isLoading, fetchedData };
+  return { fetchedData };
 };
 
 
